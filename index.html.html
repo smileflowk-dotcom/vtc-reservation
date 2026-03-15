@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VTC Paris — Transfert CDG, Orly, Disneyland | Réservation Immédiate</title>
+<meta name="description" content="VTC Paris disponible 24h/24. Transfert aéroport CDG, Orly, Disneyland Paris. Tarif fixe garanti, chauffeur professionnel. Appelez le 07 45 62 40 32.">
+<meta name="keywords" content="vtc paris, taxi cdg, transfert cdg paris, taxi roissy, vtc aeroport paris, chauffeur cdg, taxi orly, vtc disneyland, transfert aeroport paris, paris airport transfer">
+<link rel="canonical" href="https://vtc-transfert-paris.fr/">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"TaxiService","name":"VTC Paris Transfert","telephone":"+33745624032","availableLanguage":["French","Arabic","English"],"openingHours":"Mo-Su 00:00-23:59"}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--black:#080808;--gold:#C8A96E;--gold-light:#E8C98A;--white:#F5F0E8;--gray:#888880;--card:#111108}
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
+body{background:var(--black);color:var(--white);font-family:'DM Sans',sans-serif;font-weight:300;line-height:1.6;overflow-x:hidden}
+body[dir="rtl"]{font-family:'DM Sans','Segoe UI',Tahoma,sans-serif}
+.lang-bar{background:#0d0d0a;border-bottom:1px solid #1a1a14;padding:8px 40px;display:flex;justify-content:flex-end;gap:6px;align-items:center}
+body[dir="rtl"] .lang-bar{justify-content:flex-start}
+.lang-btn{background:none;border:1px solid #2a2a24;color:#888;padding:4px 12px;border-radius:3px;font-size:.75rem;cursor:pointer;transition:all .2s;letter-spacing:1px;font-family:inherit}
+.lang-btn:hover{border-color:var(--gold);color:var(--gold)}
+.lang-btn.active{border-color:var(--gold);color:var(--gold);background:#1a1400}
+.urgence-bar{background:var(--gold);color:var(--black);text-align:center;padding:10px 20px;font-size:.85rem;font-weight:500}
+.urgence-bar a{color:var(--black);font-weight:700;text-decoration:none;border-bottom:1px solid var(--black)}
+nav{display:flex;justify-content:space-between;align-items:center;padding:20px 40px;border-bottom:1px solid #1a1a14;position:sticky;top:0;background:rgba(8,8,8,.96);backdrop-filter:blur(10px);z-index:100}
+body[dir="rtl"] nav{flex-direction:row-reverse}
+.nav-logo{font-family:'Cormorant Garamond',serif;font-size:1.3rem;color:var(--gold);letter-spacing:1px}
+.nav-logo span{color:var(--white)}
+.nav-cta{display:flex;align-items:center;gap:8px;background:var(--gold);color:var(--black);text-decoration:none;padding:10px 20px;border-radius:4px;font-size:.9rem;font-weight:500;transition:background .2s;white-space:nowrap}
+.nav-cta:hover{background:var(--gold-light)}
+.hero{min-height:88vh;display:flex;align-items:center;padding:80px 40px;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 50% at 80% 50%,#C8A96E09 0%,transparent 70%),radial-gradient(ellipse 40% 60% at 10% 80%,#C8A96E05 0%,transparent 60%);pointer-events:none}
+.hero-grid{position:absolute;inset:0;background-image:linear-gradient(#C8A96E07 1px,transparent 1px),linear-gradient(90deg,#C8A96E07 1px,transparent 1px);background-size:60px 60px;pointer-events:none;mask-image:radial-gradient(ellipse at center,black 30%,transparent 80%)}
+.hero-content{position:relative;z-index:2;max-width:700px}
+body[dir="rtl"] .hero-content{margin-left:auto;margin-right:0;text-align:right}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;border:1px solid #C8A96E44;border-radius:30px;padding:6px 16px;font-size:.78rem;color:var(--gold);letter-spacing:2px;text-transform:uppercase;margin-bottom:30px;animation:fadeUp .6s ease both}
+.hero-badge::before{content:'●';font-size:.5rem;animation:blink 2s infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+h1{font-family:'Cormorant Garamond',serif;font-size:clamp(2.6rem,6vw,4.5rem);font-weight:700;line-height:1.1;margin-bottom:20px;animation:fadeUp .6s .1s ease both}
+h1 em{font-style:normal;color:var(--gold)}
+.hero-sub{font-size:1.05rem;color:#aaa89a;max-width:500px;margin-bottom:40px;animation:fadeUp .6s .2s ease both;line-height:1.8}
+.hero-actions{display:flex;gap:16px;flex-wrap:wrap;animation:fadeUp .6s .3s ease both}
+body[dir="rtl"] .hero-actions{flex-direction:row-reverse}
+.btn-primary{display:inline-flex;align-items:center;gap:10px;background:var(--gold);color:var(--black);text-decoration:none;padding:16px 32px;border-radius:4px;font-size:1rem;font-weight:500;transition:all .2s;white-space:nowrap}
+.btn-primary:hover{background:var(--gold-light);transform:translateY(-1px)}
+.btn-whatsapp{display:inline-flex;align-items:center;gap:10px;border:1px solid #25D366;color:#fff;text-decoration:none;padding:16px 28px;border-radius:4px;font-size:1rem;font-weight:500;transition:all .2s;background:#25D366;white-space:nowrap}
+.btn-whatsapp:hover{background:#1ebe5a;transform:translateY(-1px)}
+.hero-trust{margin-top:50px;display:flex;gap:30px;flex-wrap:wrap;animation:fadeUp .6s .4s ease both}
+body[dir="rtl"] .hero-trust{flex-direction:row-reverse}
+.trust-item{display:flex;align-items:center;gap:8px;font-size:.82rem;color:var(--gray)}
+.trust-item .check{color:var(--gold)}
+.section{padding:80px 40px;max-width:1200px;margin:0 auto}
+.section-label{font-size:.75rem;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:12px}
+h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,4vw,2.8rem);font-weight:700;line-height:1.2;margin-bottom:16px}
+.section-sub{color:var(--gray);max-width:500px;margin-bottom:50px;font-size:.95rem}
+.destinations-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:2px}
+.dest-card{background:var(--card);padding:36px 28px;position:relative;overflow:hidden;transition:background .3s;border:1px solid #1a1a14}
+.dest-card:hover{background:#161610}
+.dest-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:var(--gold);transform:scaleX(0);transition:transform .3s;transform-origin:left}
+body[dir="rtl"] .dest-card::after{transform-origin:right}
+.dest-card:hover::after{transform:scaleX(1)}
+.dest-icon{font-size:2rem;margin-bottom:16px}
+.dest-name{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:700;margin-bottom:8px}
+.dest-desc{font-size:.85rem;color:var(--gray);line-height:1.6;margin-bottom:16px}
+.dest-price{font-size:.8rem;color:var(--gold);letter-spacing:1px}
+.why-section{padding:80px 40px;background:#0C0C08;border-top:1px solid #1a1a14;border-bottom:1px solid #1a1a14}
+.why-inner{max-width:1200px;margin:0 auto}
+.why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:40px;margin-top:50px}
+.why-num{font-family:'Cormorant Garamond',serif;font-size:3rem;color:#1e1e18;font-weight:700;line-height:1;margin-bottom:12px}
+.why-title{font-size:1rem;font-weight:500;margin-bottom:8px}
+.why-desc{font-size:.85rem;color:var(--gray);line-height:1.7}
+.zones-list{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}
+body[dir="rtl"] .zones-list{flex-direction:row-reverse}
+.zone-tag{border:1px solid #2a2a20;color:#aaa898;padding:8px 16px;border-radius:3px;font-size:.82rem;transition:all .2s}
+.zone-tag:hover{border-color:var(--gold);color:var(--gold)}
+.cta-section{padding:100px 40px;text-align:center;position:relative;overflow:hidden}
+.cta-section::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 60% at 50% 50%,#C8A96E07 0%,transparent 70%);pointer-events:none}
+.cta-section h2{margin-bottom:16px}
+.cta-section p{color:var(--gray);margin-bottom:40px}
+.cta-phone{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,6vw,3.5rem);font-weight:700;color:var(--gold);text-decoration:none;display:block;margin-bottom:30px;letter-spacing:2px;transition:color .2s}
+.cta-phone:hover{color:var(--gold-light)}
+.cta-buttons{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+footer{border-top:1px solid #1a1a14;padding:40px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px}
+footer p{font-size:.8rem;color:#555548}
+.footer-links{display:flex;gap:20px}
+.footer-links a{font-size:.8rem;color:#555548;text-decoration:none}
+.footer-links a:hover{color:var(--gold)}
+.floating-call{position:fixed;bottom:30px;right:30px;z-index:200;display:flex;flex-direction:column;align-items:flex-end;gap:10px}
+body[dir="rtl"] .floating-call{right:auto;left:30px;align-items:flex-start}
+.float-btn{display:flex;align-items:center;gap:10px;padding:14px 20px;border-radius:50px;text-decoration:none;font-size:.9rem;font-weight:500;box-shadow:0 4px 20px rgba(0,0,0,.5);transition:transform .2s}
+.float-btn:hover{transform:scale(1.04)}
+.float-call{background:var(--gold);color:var(--black)}
+.float-wa{background:#128C7E;color:#fff}
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+[data-lang]{display:none}[data-lang].active{display:block}
+.il{display:none}.il.active{display:inline}
+@media(max-width:600px){nav{padding:16px 20px}.lang-bar{padding:8px 20px}.hero{padding:50px 20px;min-height:auto}.section,.why-section,.cta-section{padding:60px 20px}footer{padding:30px 20px;flex-direction:column;text-align:center}.floating-call{bottom:20px;right:16px}.float-btn .lbl{display:none}}
+</style>
+</head>
+<body>
+<div class="lang-bar">
+  <button class="lang-btn active" onclick="setLang('fr',this)">FR</button>
+  <button class="lang-btn" onclick="setLang('en',this)">EN</button>
+  <button class="lang-btn" onclick="setLang('ar',this)">AR</button>
+</div>
+<div class="urgence-bar">
+  <span data-lang="fr" class="active">Disponible 24h/24 — Réservation immédiate → <a href="tel:+33745624032"><span style="white-space:nowrap">07 45 62 40 32</span></a></span>
+  <span data-lang="en">Available 24/7 — Instant booking → <a href="tel:+33745624032"><span style="white-space:nowrap">07 45 62 40 32</span></a></span>
+  <span data-lang="ar">متاح 24/7 — احجز الآن → <a href="tel:+33745624032"><span style="white-space:nowrap">07 45 62 40 32</span></a></span>
+</div>
+<nav>
+  <div class="nav-logo">VTC<span> Paris Transfert</span></div>
+  <a href="tel:+33745624032" class="nav-cta">
+    <span>📞</span>
+    <span class="il fr-el active">Appeler maintenant</span>
+    <span class="il en-el">Call now</span>
+    <span class="il ar-el">اتصل الآن</span>
+  </a>
+</nav>
+<section class="hero">
+  <div class="hero-grid"></div>
+  <div class="hero-content">
+    <div class="hero-badge">
+      <span class="il fr-el active">Chauffeur VTC — Île-de-France</span>
+      <span class="il en-el">Private Driver — Île-de-France</span>
+      <span class="il ar-el">سائق خاص — إيل دو فرانس</span>
+    </div>
+    <h1>
+      <span data-lang="fr" class="active">Votre transfert<br><em>CDG · Orly · Disney</em><br>en toute sérénité</span>
+      <span data-lang="en">Your transfer<br><em>CDG · Orly · Disney</em><br>with peace of mind</span>
+      <span data-lang="ar">نقلك إلى<br><em>CDG · أورلي · ديزني</em><br>بكل راحة وأمان</span>
+    </h1>
+    <p class="hero-sub">
+      <span data-lang="fr" class="active">Chauffeur privé professionnel, disponible 24h/24 et 7j/7. Tarif fixe annoncé à l'avance. Ponctualité garantie.</span>
+      <span data-lang="en">Professional private driver, available 24/7. Fixed fare announced upfront. Punctuality guaranteed.</span>
+      <span data-lang="ar">سائق خاص محترف، متاح على مدار الساعة. سعر ثابت محدد مسبقًا. الالتزام بالمواعيد مضمون.</span>
+    </p>
+    <div class="hero-actions">
+      <a href="tel:+33745624032" class="btn-primary"><span>📞</span><span style="white-space:nowrap">07 45 62 40 32</span></a>
+      <a href="https://wa.me/33745624032?text=Bonjour" class="btn-whatsapp wa-link" target="_blank"><span>💬</span><span class="il fr-el active">WhatsApp</span><span class="il en-el">WhatsApp</span><span class="il ar-el">واتساب</span></a>
+    </div>
+    <div class="hero-trust">
+      <div class="trust-item"><span class="check">✓</span><span class="il fr-el active">Tarif fixe garanti</span><span class="il en-el">Fixed fare guaranteed</span><span class="il ar-el">سعر ثابت مضمون</span></div>
+      <div class="trust-item"><span class="check">✓</span><span class="il fr-el active">Disponible 24h/24</span><span class="il en-el">Available 24/7</span><span class="il ar-el">متاح على مدار الساعة</span></div>
+      <div class="trust-item"><span class="check">✓</span><span class="il fr-el active">Suivi vol en temps réel</span><span class="il en-el">Real-time flight tracking</span><span class="il ar-el">تتبع الرحلة الفوري</span></div>
+      <div class="trust-item"><span class="check">✓</span><span class="il fr-el active">Voiture propre et climatisée</span><span class="il en-el">Clean air-conditioned car</span><span class="il ar-el">سيارة نظيفة ومكيفة</span></div>
+    </div>
+  </div>
+</section>
+<section class="section">
+  <div class="section-label"><span class="il fr-el active">Destinations</span><span class="il en-el">Destinations</span><span class="il ar-el">الوجهات</span></div>
+  <h2><span data-lang="fr" class="active">Tous vos transferts<br>pris en charge</span><span data-lang="en">All your transfers<br>taken care of</span><span data-lang="ar">جميع رحلاتك<br>في عهدتنا</span></h2>
+  <div class="destinations-grid">
+    <div class="dest-card"><div class="dest-icon">✈️</div><div class="dest-name">CDG — Charles de Gaulle</div><div class="dest-desc"><span data-lang="fr" class="active">Tous terminaux. Suivi de vol inclus. Votre chauffeur vous attend même en cas de retard.</span><span data-lang="en">All terminals. Flight tracking included. Your driver waits even if delayed.</span><span data-lang="ar">جميع الصالات. تتبع الرحلة مشمول. سائقك ينتظرك حتى في حالة التأخير.</span></div><div class="dest-price"><span class="il fr-el active">Tarif fixe · Devis immédiat</span><span class="il en-el">Fixed fare · Instant quote</span><span class="il ar-el">سعر ثابت · عرض فوري</span></div></div>
+    <div class="dest-card"><div class="dest-icon">🛫</div><div class="dest-name">Orly — Aéroport de Paris</div><div class="dest-desc"><span data-lang="fr" class="active">Terminal Orly 1, 2, 3, 4. Prise en charge à domicile, ponctualité assurée.</span><span data-lang="en">Orly terminals 1,2,3,4. Door-to-door pickup, punctuality assured.</span><span data-lang="ar">صالات أورلي 1،2،3،4. الاصطحاب من المنزل، الالتزام بالمواعيد مضمون.</span></div><div class="dest-price"><span class="il fr-el active">Tarif fixe · Devis immédiat</span><span class="il en-el">Fixed fare · Instant quote</span><span class="il ar-el">سعر ثابت · عرض فوري</span></div></div>
+    <div class="dest-card"><div class="dest-icon">🏰</div><div class="dest-name">Disneyland Paris</div><div class="dest-desc"><span data-lang="fr" class="active">Marne-la-Vallée, Disney Village, hôtels Disney. Idéal pour familles et groupes.</span><span data-lang="en">Marne-la-Vallée, Disney Village, Disney hotels. Perfect for families and groups.</span><span data-lang="ar">مارن-لا-فاليه، ديزني فيليج، فنادق ديزني. مثالي للعائلات والمجموعات.</span></div><div class="dest-price"><span class="il fr-el active">Tarif fixe · Devis immédiat</span><span class="il en-el">Fixed fare · Instant quote</span><span class="il ar-el">سعر ثابت · عرض فوري</span></div></div>
+    <div class="dest-card"><div class="dest-icon">🗼</div><div class="dest-name"><span class="il fr-el active">Paris & Île-de-France</span><span class="il en-el">Paris & Île-de-France</span><span class="il ar-el">باريس وإيل دو فرانس</span></div><div class="dest-desc"><span data-lang="fr" class="active">Toutes adresses parisiennes, banlieue, gares TGV, événements professionnels.</span><span data-lang="en">All Paris addresses, suburbs, TGV stations, professional events.</span><span data-lang="ar">جميع عناوين باريس، الضواحي، محطات TGV، الفعاليات المهنية.</span></div><div class="dest-price"><span class="il fr-el active">Tarif fixe · Devis immédiat</span><span class="il en-el">Fixed fare · Instant quote</span><span class="il ar-el">سعر ثابت · عرض فوري</span></div></div>
+  </div>
+</section>
+<section class="why-section">
+  <div class="why-inner">
+    <div class="section-label"><span class="il fr-el active">Pourquoi nous choisir</span><span class="il en-el">Why choose us</span><span class="il ar-el">لماذا تختارنا</span></div>
+    <h2><span data-lang="fr" class="active">La différence<br>d'un vrai chauffeur privé</span><span data-lang="en">The difference of<br>a real private driver</span><span data-lang="ar">الفرق مع<br>سائق خاص حقيقي</span></h2>
+    <div class="why-grid">
+      <div><div class="why-num">01</div><div class="why-title"><span class="il fr-el active">Tarif fixe, zéro surprise</span><span class="il en-el">Fixed fare, no surprises</span><span class="il ar-el">سعر ثابت، لا مفاجآت</span></div><div class="why-desc"><span data-lang="fr" class="active">Le prix est annoncé avant la course. Pas de compteur, pas de majoration.</span><span data-lang="en">Price set before the ride. No meter, no surcharges.</span><span data-lang="ar">السعر محدد قبل الرحلة. لا عداد، لا رسوم إضافية.</span></div></div>
+      <div><div class="why-num">02</div><div class="why-title"><span class="il fr-el active">Disponible 24h/24</span><span class="il en-el">Available 24/7</span><span class="il ar-el">متاح على مدار الساعة</span></div><div class="why-desc"><span data-lang="fr" class="active">Vol à 5h du matin ? Retour tardif ? Votre chauffeur est présent quelle que soit l'heure.</span><span data-lang="en">5am flight? Late return? Your driver is there at any hour.</span><span data-lang="ar">رحلة الساعة 5 صباحًا؟ سائقك حاضر في أي وقت.</span></div></div>
+      <div><div class="why-num">03</div><div class="why-title"><span class="il fr-el active">Suivi de vol en temps réel</span><span class="il en-el">Real-time flight tracking</span><span class="il ar-el">تتبع الرحلة الفوري</span></div><div class="why-desc"><span data-lang="fr" class="active">Retard de votre avion ? Le chauffeur ajuste automatiquement sa prise en charge.</span><span data-lang="en">Flight delayed? Driver automatically adjusts pickup time.</span><span data-lang="ar">تأخر رحلتك؟ يضبط السائق وقت الاصطحاب تلقائيًا.</span></div></div>
+      <div><div class="why-num">04</div><div class="why-title"><span class="il fr-el active">Réservation en 2 minutes</span><span class="il en-el">Booking in 2 minutes</span><span class="il ar-el">الحجز في دقيقتين</span></div><div class="why-desc"><span data-lang="fr" class="active">Un appel ou un message WhatsApp suffit. Confirmation immédiate.</span><span data-lang="en">One call or WhatsApp message. Immediate confirmation.</span><span data-lang="ar">مكالمة واحدة أو رسالة واتساب. تأكيد فوري.</span></div></div>
+    </div>
+  </div>
+</section>
+<section class="section">
+  <div class="section-label"><span class="il fr-el active">Zone de service</span><span class="il en-el">Service area</span><span class="il ar-el">منطقة الخدمة</span></div>
+  <h2><span data-lang="fr" class="active">Tout Paris<br>et Île-de-France</span><span data-lang="en">All of Paris<br>and Île-de-France</span><span data-lang="ar">كل باريس<br>وإيل دو فرانس</span></h2>
+  <div class="zones-list">
+    <span class="zone-tag">Paris 1er–20e</span><span class="zone-tag">Boulogne-Billancourt</span><span class="zone-tag">Neuilly-sur-Seine</span><span class="zone-tag">Versailles</span><span class="zone-tag">La Défense</span><span class="zone-tag">Levallois-Perret</span><span class="zone-tag">Saint-Denis</span><span class="zone-tag">Vincennes</span><span class="zone-tag">Créteil</span><span class="zone-tag">Montreuil</span><span class="zone-tag">Issy-les-Moulineaux</span><span class="zone-tag">Courbevoie</span><span class="zone-tag">Nanterre</span><span class="zone-tag">Marne-la-Vallée</span><span class="zone-tag">Roissy-en-France</span><span class="zone-tag">Villepinte</span>
+  </div>
+</section>
+<section class="cta-section">
+  <div class="section-label"><span class="il fr-el active">Réservation</span><span class="il en-el">Booking</span><span class="il ar-el">الحجز</span></div>
+  <h2><span data-lang="fr" class="active">Prêt à partir ?<br>Appelez maintenant.</span><span data-lang="en">Ready to go?<br>Call now.</span><span data-lang="ar">مستعد للانطلاق؟<br>اتصل الآن.</span></h2>
+  <p><span data-lang="fr" class="active">Disponible 24h/24 — Réponse immédiate — Tarif fixe en 30 secondes</span><span data-lang="en">Available 24/7 — Immediate response — Fixed fare in 30 seconds</span><span data-lang="ar">متاح 24/7 — رد فوري — سعر ثابت في 30 ثانية</span></p>
+  <a href="tel:+33745624032" class="cta-phone" style="white-space:nowrap">07 45 62 40 32</a>
+  <div class="cta-buttons">
+    <a href="tel:+33745624032" class="btn-primary"><span>📞</span><span class="il fr-el active">Appel direct</span><span class="il en-el">Direct call</span><span class="il ar-el">اتصال مباشر</span></a>
+    <a href="https://wa.me/33745624032" class="btn-whatsapp wa-link" target="_blank"><span>💬</span><span class="il fr-el active">WhatsApp</span><span class="il en-el">WhatsApp</span><span class="il ar-el">واتساب</span></a>
+  </div>
+</section>
+<footer>
+  <p>© 2026 VTC Paris Transfert — Chauffeur privé Île-de-France</p>
+  <div class="footer-links"><a href="tel:+33745624032">07 45 62 40 32</a><a href="https://wa.me/33745624032" target="_blank">WhatsApp</a></div>
+</footer>
+<div class="floating-call">
+  <a href="https://wa.me/33745624032" class="float-btn float-wa wa-link" target="_blank"><span>💬</span><span class="lbl">WhatsApp</span></a>
+  <a href="tel:+33745624032" class="float-btn float-call"><span>📞</span><span class="lbl" style="white-space:nowrap">07 45 62 40 32</span></a>
+</div>
+<script>
+const WA = {
+  fr:'Bonjour%2C%20je%20souhaite%20r%C3%A9server%20un%20transfert%20VTC.',
+  en:'Hello%2C%20I%20would%20like%20to%20book%20a%20VTC%20transfer.',
+  ar:'%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D8%8C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%AD%D8%AC%D8%B2%20%D8%B3%D9%8A%D8%A7%D8%B1%D8%A9%20%D8%AE%D8%A7%D8%B5%D8%A9.'
+};
+function setLang(lang, btn) {
+  document.body.dir = lang==='ar'?'rtl':'ltr';
+  document.documentElement.lang = lang;
+  document.querySelectorAll('[data-lang]').forEach(el=>el.classList.toggle('active',el.getAttribute('data-lang')===lang));
+  document.querySelectorAll('.il').forEach(el=>el.classList.toggle('active',el.classList.contains(lang+'-el')));
+  document.querySelectorAll('.lang-btn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.wa-link').forEach(a=>a.href='https://wa.me/33745624032?text='+WA[lang]);
+}
+</script>
+</body>
+</html>
