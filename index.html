@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Caviar – Parlons de votre projet</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --navy-deep: #0a1628;
+    --navy-medium: #132440;
+    --navy-light: #1a2f4f;
+    --gold: #d4af37;
+    --gold-light: #f0d68e;
+    --white: #ffffff;
+    --white-soft: rgba(255,255,255,0.92);
+    --white-muted: rgba(255,255,255,0.65);
+    --glow: rgba(212, 175, 55, 0.4);
+  }
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    margin: 0;
+    background: var(--navy-deep);
+    font-family: 'Montserrat', sans-serif;
+    color: var(--white);
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+  }
+
+  /* Effet de particules étoilées */
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+      radial-gradient(2px 2px at 20% 30%, rgba(255,255,255,0.3), transparent),
+      radial-gradient(2px 2px at 60% 70%, rgba(255,255,255,0.2), transparent),
+      radial-gradient(1px 1px at 50% 50%, rgba(255,255,255,0.2), transparent),
+      radial-gradient(1px 1px at 80% 10%, rgba(255,255,255,0.3), transparent),
+      radial-gradient(2px 2px at 90% 60%, rgba(255,255,255,0.2), transparent),
+      radial-gradient(1px 1px at 33% 80%, rgba(255,255,255,0.25), transparent),
+      radial-gradient(1px 1px at 15% 55%, rgba(255,255,255,0.2), transparent);
+    background-size: 200% 200%;
+    background-position: 0% 0%;
+    animation: stars 60s linear infinite;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  @keyframes stars {
+    0% { background-position: 0% 0%; }
+    100% { background-position: 100% 100%; }
+  }
+
+  .wrapper {
+    padding: 40px 20px;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+  }
+
+  .container {
+    width: 100%;
+    max-width: 580px;
+    animation: fadeInUp 0.8s ease-out;
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Logo et Header */
+  .logo-container {
+    text-align: center;
+    margin-bottom: 50px;
+    animation: glow 3s ease-in-out infinite;
+  }
+
+  @keyframes glow {
+    0%, 100% {
+      filter: drop-shadow(0 0 20px var(--glow));
+    }
+    50% {
+      filter: drop-shadow(0 0 35px var(--glow));
+    }
+  }
+
+  .logo-symbol {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 20px;
+    background: radial-gradient(circle, var(--gold) 0%, transparent 70%);
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .logo-symbol::before {
+    content: '';
+    width: 50px;
+    height: 50px;
+    border: 2px solid var(--gold);
+    border-radius: 50%;
+    position: absolute;
+  }
+
+  .logo-symbol::after {
+    content: '';
+    width: 30px;
+    height: 30px;
+    background: conic-gradient(from 0deg, transparent, var(--gold-light), transparent);
+    border-radius: 50%;
+    animation: rotate 4s linear infinite;
+  }
+
+  @keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+
+  .logo-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 14px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--white-muted);
+    margin-bottom: 4px;
+  }
+
+  .logo-brand {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 42px;
+    font-weight: 300;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+    color: var(--white);
+    background: linear-gradient(135deg, var(--white) 0%, var(--gold-light) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Card principale */
+  .card {
+    background: linear-gradient(135deg, var(--navy-medium) 0%, var(--navy-light) 100%);
+    border-radius: 24px;
+    padding: 50px 40px;
+    box-shadow: 
+      0 20px 60px rgba(0,0,0,0.5),
+      inset 0 1px 0 rgba(255,255,255,0.1);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.1), transparent);
+    animation: shine 8s ease-in-out infinite;
+  }
+
+  @keyframes shine {
+    0%, 100% { left: -100%; }
+    50% { left: 100%; }
+  }
+
+  h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 32px;
+    font-weight: 300;
+    margin: 0 0 12px;
+    color: var(--white);
+    letter-spacing: 1px;
+  }
+
+  .subtitle {
+    font-size: 15px;
+    color: var(--white-muted);
+    margin: 0 0 40px;
+    line-height: 1.6;
+    font-weight: 300;
+  }
+
+  /* Form elements */
+  label {
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    display: block;
+    color: var(--gold-light);
+    font-weight: 500;
+  }
+
+  input,
+  textarea,
+  select {
+    width: 100%;
+    padding: 16px 18px;
+    margin-bottom: 28px;
+    border-radius: 12px;
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    font-size: 15px;
+    background: rgba(10, 22, 40, 0.6);
+    color: var(--white-soft);
+    font-family: 'Montserrat', sans-serif;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+  }
+
+  input:focus,
+  textarea:focus,
+  select:focus {
+    outline: none;
+    border-color: var(--gold);
+    background: rgba(10, 22, 40, 0.8);
+    box-shadow: 0 0 20px var(--glow);
+  }
+
+  input::placeholder,
+  textarea::placeholder {
+    color: var(--white-muted);
+  }
+
+  textarea {
+    resize: vertical;
+    min-height: 100px;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  select {
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L6 6L11 1' stroke='%23d4af37' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 18px center;
+    padding-right: 45px;
+  }
+
+  select option {
+    background: var(--navy-medium);
+    color: var(--white);
+  }
+
+  /* Button */
+  button {
+    width: 100%;
+    padding: 18px;
+    border-radius: 12px;
+    border: none;
+    background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+    color: var(--navy-deep);
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Montserrat', sans-serif;
+    position: relative;
+    overflow: hidden;
+  }
+
+  button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+    transition: left 0.5s ease;
+  }
+
+  button:hover::before {
+    left: 100%;
+  }
+
+  button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px var(--glow);
+  }
+
+  button:active {
+    transform: translateY(0);
+  }
+
+  /* Footer */
+  .footer {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 13px;
+    color: var(--white-muted);
+    line-height: 1.6;
+    font-weight: 300;
+  }
+
+  .signature {
+    margin-top: 40px;
+    text-align: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 14px;
+    letter-spacing: 3px;
+    color: var(--gold);
+    text-transform: uppercase;
+    opacity: 0.85;
+  }
+
+  .signature span {
+    display: block;
+    font-size: 11px;
+    margin-top: 6px;
+    letter-spacing: 2px;
+    color: var(--white-muted);
+  }
+
+  /* Responsive */
+  @media (max-width: 640px) {
+    .wrapper {
+      padding: 30px 16px;
+    }
+
+    .card {
+      padding: 35px 24px;
+    }
+
+    h1 {
+      font-size: 26px;
+    }
+
+    .logo-brand {
+      font-size: 34px;
+      letter-spacing: 6px;
+    }
+
+    .logo-symbol {
+      width: 60px;
+      height: 60px;
+    }
+  }
+</style>
+</head>
+
+<body>
+
+<div class="wrapper">
+  <div class="container">
+    <!-- Logo -->
+    <div class="logo-container">
+      <div class="logo-symbol"></div>
+      <div class="logo-text">Agence Digitale</div>
+      <div class="logo-brand">Caviar</div>
+    </div>
+
+    <!-- Card -->
+    <div class="card">
+      <h1>Parlons de votre projet</h1>
+      <p class="subtitle">
+        Quelques questions essentielles pour voir si c'est juste de travailler ensemble.
+      </p>
+
+      <form id="caviarForm">
+        <label>Nom & Prénom</label>
+        <input type="text" name="name" placeholder="Jean Dupont" required>
+
+        <label>Email professionnel</label>
+        <input type="email" name="email" placeholder="vous@entreprise.com" required>
+
+        <label>Votre activité</label>
+        <input type="text" name="activity" placeholder="Coach, e-commerce, startup...">
+
+        <label>Besoin principal</label>
+        <select id="need" name="need">
+          <option>Branding / positionnement</option>
+          <option>Landing page / site</option>
+          <option>Acquisition / contenu</option>
+          <option>Tunnel de vente</option>
+          <option>Accompagnement stratégique</option>
+        </select>
+
+        <label>Votre situation actuelle</label>
+        <textarea name="situation" placeholder="Décrivez brièvement où vous en êtes et ce que vous cherchez à accomplir..."></textarea>
+
+        <label>Budget</label>
+        <select id="budget" name="budget">
+          <option value="low">&lt; 1 000 €</option>
+          <option value="mid">1 000 – 3 000 €</option>
+          <option value="high">3 000 – 7 000 €</option>
+          <option value="premium">7 000 € et +</option>
+        </select>
+
+        <label>Êtes-vous prêt(e) à vous impliquer ?</label>
+        <select id="commitment" name="commitment">
+          <option value="yes">Oui</option>
+          <option value="hesitate">J'hésite encore</option>
+          <option value="no">Non</option>
+        </select>
+
+        <button type="submit">Envoyer ma demande</button>
+      </form>
+
+      <div class="footer">
+        Chaque demande est lue personnellement.<br>
+        Si c'est aligné, réponse sous 48h.
+      </div>
+
+      <div class="signature">
+        Business Caviar
+        <span>Éveil & Happy Money</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.getElementById("caviarForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const budget = document.getElementById("budget").value;
+    const commitment = document.getElementById("commitment").value;
+
+    const skool = "https://www.skool.com/avatar-institut-6074/about";
+    const calendly = "https://calendly.com/flowfun/kamal?month=2026-02";
+
+    if ((budget === "high" || budget === "premium") && commitment === "yes") {
+      window.location.href = calendly;
+    } else {
+      window.location.href = skool;
+    }
+  });
+</script>
+
+</body>
+</html>
