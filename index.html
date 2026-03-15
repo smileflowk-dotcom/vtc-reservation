@@ -1,463 +1,867 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" dir="ltr">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Caviar – Parlons de votre projet</title>
+
+<!-- TITLE adapté par langue via JS -->
+<title>VTC Paris Aéroport CDG Orly — Transfert 24h/24 | 07 45 62 40 32</title>
+<meta name="description" content="Chauffeur VTC Paris disponible 24h/24. Transfert aéroport CDG, Orly, Disneyland Paris — tarif fixe garanti, suivi de vol inclus. Réservez en 2 minutes au 07 45 62 40 32.">
+<link rel="canonical" href="https://smileflowk-dotcom.github.io/vtc-reservation/">
+
+<!-- HREFLANG -->
+<link rel="alternate" hreflang="fr" href="https://smileflowk-dotcom.github.io/vtc-reservation/">
+<link rel="alternate" hreflang="en" href="https://smileflowk-dotcom.github.io/vtc-reservation/">
+<link rel="alternate" hreflang="ar" href="https://smileflowk-dotcom.github.io/vtc-reservation/">
+<link rel="alternate" hreflang="x-default" href="https://smileflowk-dotcom.github.io/vtc-reservation/">
+
+<!-- SCHEMA: TaxiService -->
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"TaxiService","name":"VTC Paris Transfert","description":"Service VTC Paris pour transferts aéroport CDG, Orly, Disneyland Paris et toutes destinations en Île-de-France.","telephone":"+33745624032","url":"https://vtc-transfert-paris.fr","areaServed":["Paris","Île-de-France","CDG","Orly","Disneyland Paris"],"availableLanguage":["French","Arabic","English"],"openingHours":"Mo-Su 00:00-23:59","priceRange":"€€"}
+</script>
+
+<!-- SCHEMA: LocalBusiness -->
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"LocalBusiness","name":"VTC Paris Transfert","telephone":"+33745624032","url":"https://vtc-transfert-paris.fr","areaServed":"Île-de-France","openingHoursSpecification":{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"00:00","closes":"23:59"},"priceRange":"€€","availableLanguage":["French","Arabic","English"]}
+</script>
+
+<!-- SCHEMA: FAQPage -->
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"Quel est le tarif pour un transfert CDG Paris ?","acceptedAnswer":{"@type":"Answer","text":"Le tarif est fixe à partir de 35€, annoncé avant la course sans surprise. Appelez le 07 45 62 40 32 pour un devis en 30 secondes."}},
+{"@type":"Question","name":"What is the fare for a Paris CDG airport transfer?","acceptedAnswer":{"@type":"Answer","text":"Fixed fare from €35, announced before the ride with no surprises. Call 07 45 62 40 32 for an instant quote."}},
+{"@type":"Question","name":"ما هو سعر التنقل من مطار CDG إلى باريس؟","acceptedAnswer":{"@type":"Answer","text":"السعر ثابت ابتداءً من 35 يورو ويُحدد قبل الرحلة بدون أي مفاجآت. اتصل على 07 45 62 40 32 للحصول على عرض فوري."}},
+{"@type":"Question","name":"Que se passe-t-il si mon vol est retardé ?","acceptedAnswer":{"@type":"Answer","text":"Votre chauffeur suit votre vol en temps réel et ajuste automatiquement l'heure de prise en charge."}},
+{"@type":"Question","name":"What happens if my flight is delayed?","acceptedAnswer":{"@type":"Answer","text":"Your driver tracks your flight in real time and automatically adjusts the pickup time. No need to call."}},
+{"@type":"Question","name":"ماذا يحدث إذا تأخرت رحلتي؟","acceptedAnswer":{"@type":"Answer","text":"سائقك يتابع رحلتك لحظة بلحظة ويضبط وقت الاصطحاب تلقائيًا. لا حاجة لأي اتصال من طرفك."}},
+{"@type":"Question","name":"Parlez-vous arabe ?","acceptedAnswer":{"@type":"Answer","text":"Oui, notre service est disponible en français, anglais et arabe. Contactez-nous en arabe par WhatsApp au 07 45 62 40 32."}},
+{"@type":"Question","name":"Do you provide business invoices?","acceptedAnswer":{"@type":"Answer","text":"Yes, we provide full invoices for expense reports. Ideal for corporate travelers and business trips."}},
+{"@type":"Question","name":"Avez-vous des vans pour les familles et groupes ?","acceptedAnswer":{"@type":"Answer","text":"Oui, notre flotte comprend des vans avec sièges enfants disponibles sur demande. Idéal pour Disneyland Paris."}},
+{"@type":"Question","name":"Quelle est la différence entre VTC et taxi ?","acceptedAnswer":{"@type":"Answer","text":"Un VTC propose un tarif fixe annoncé avant la course, contrairement au taxi dont le prix dépend du compteur."}},
+{"@type":"Question","name":"هل تتحدثون العربية؟","acceptedAnswer":{"@type":"Answer","text":"نعم، خدمتنا متاحة بالعربية الفصحى والعامية. تواصل معنا عبر واتساب على الرقم 07 45 62 40 32."}}
+]}
+</script>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
-  :root {
-    --navy-deep: #0a1628;
-    --navy-medium: #132440;
-    --navy-light: #1a2f4f;
-    --gold: #d4af37;
-    --gold-light: #f0d68e;
-    --white: #ffffff;
-    --white-soft: rgba(255,255,255,0.92);
-    --white-muted: rgba(255,255,255,0.65);
-    --glow: rgba(212, 175, 55, 0.4);
-  }
+:root{--black:#080808;--gold:#C8A96E;--gold-light:#E8C98A;--white:#F5F0E8;--gray:#888880;--card:#111108}
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
+body{background:var(--black);color:var(--white);font-family:'DM Sans',sans-serif;font-weight:300;line-height:1.6;overflow-x:hidden}
+body[dir="rtl"]{font-family:'DM Sans','Segoe UI',Tahoma,sans-serif}
 
-  * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
+/* LANG BAR */
+.lang-bar{background:#111108;border-bottom:1px solid #C9A84C44;padding:12px 40px;display:flex;justify-content:flex-end;gap:8px;align-items:center}
+body[dir="rtl"] .lang-bar{justify-content:flex-start}
+.lang-btn{background:#1a1a14;border:1px solid #C9A84C55;color:#C9A84C;padding:7px 16px;border-radius:4px;font-size:.82rem;cursor:pointer;transition:all .2s;font-family:inherit;min-height:36px;font-weight:500;letter-spacing:.5px}
+.lang-btn:hover{border-color:var(--gold);color:var(--black);background:var(--gold)}
+.lang-btn.active{border-color:var(--gold);color:var(--black);background:var(--gold)}
 
-  body {
-    margin: 0;
-    background: var(--navy-deep);
-    font-family: 'Montserrat', sans-serif;
-    color: var(--white);
-    min-height: 100vh;
-    position: relative;
-    overflow-x: hidden;
-  }
+/* URGENCE */
+.urgence-bar{background:var(--gold);color:var(--black);text-align:center;padding:10px 20px;font-size:.85rem;font-weight:500}
+.urgence-bar a{color:var(--black);font-weight:700;text-decoration:none;border-bottom:1px solid var(--black)}
 
-  /* Effet de particules étoilées */
-  body::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: 
-      radial-gradient(2px 2px at 20% 30%, rgba(255,255,255,0.3), transparent),
-      radial-gradient(2px 2px at 60% 70%, rgba(255,255,255,0.2), transparent),
-      radial-gradient(1px 1px at 50% 50%, rgba(255,255,255,0.2), transparent),
-      radial-gradient(1px 1px at 80% 10%, rgba(255,255,255,0.3), transparent),
-      radial-gradient(2px 2px at 90% 60%, rgba(255,255,255,0.2), transparent),
-      radial-gradient(1px 1px at 33% 80%, rgba(255,255,255,0.25), transparent),
-      radial-gradient(1px 1px at 15% 55%, rgba(255,255,255,0.2), transparent);
-    background-size: 200% 200%;
-    background-position: 0% 0%;
-    animation: stars 60s linear infinite;
-    pointer-events: none;
-    z-index: 1;
-  }
+/* NAV */
+nav{display:flex;justify-content:space-between;align-items:center;padding:20px 40px;border-bottom:1px solid #1a1a14;position:sticky;top:0;background:rgba(8,8,8,.96);backdrop-filter:blur(10px);z-index:100}
+body[dir="rtl"] nav{flex-direction:row-reverse}
+.nav-logo{font-family:'Cormorant Garamond',serif;font-size:1.3rem;color:var(--gold);letter-spacing:1px}
+.nav-logo span{color:var(--white)}
+.nav-cta{display:flex;align-items:center;gap:8px;background:var(--gold);color:var(--black);text-decoration:none;padding:12px 22px;border-radius:4px;font-size:.9rem;font-weight:500;transition:background .2s;white-space:nowrap;min-height:48px}
+.nav-cta:hover{background:var(--gold-light)}
 
-  @keyframes stars {
-    0% { background-position: 0% 0%; }
-    100% { background-position: 100% 100%; }
-  }
+/* HERO */
+.hero{min-height:88vh;display:flex;align-items:center;padding:80px 40px;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 50% at 80% 50%,#C8A96E09 0%,transparent 70%),radial-gradient(ellipse 40% 60% at 10% 80%,#C8A96E05 0%,transparent 60%);pointer-events:none}
+.hero-grid{position:absolute;inset:0;background-image:linear-gradient(#C8A96E07 1px,transparent 1px),linear-gradient(90deg,#C8A96E07 1px,transparent 1px);background-size:60px 60px;pointer-events:none;mask-image:radial-gradient(ellipse at center,black 30%,transparent 80%)}
+.hero-content{position:relative;z-index:2;max-width:700px}
+body[dir="rtl"] .hero-content{margin-left:auto;margin-right:0;text-align:right}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;border:1px solid #C8A96E44;border-radius:30px;padding:6px 16px;font-size:.78rem;color:var(--gold);letter-spacing:2px;text-transform:uppercase;margin-bottom:30px;animation:fadeUp .6s ease both}
+.hero-badge::before{content:'●';font-size:.5rem;animation:blink 2s infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+h1{font-family:'Cormorant Garamond',serif;font-size:clamp(2.4rem,6vw,4.5rem);font-weight:700;line-height:1.1;margin-bottom:16px;animation:fadeUp .6s .1s ease both}
+h1 em{font-style:normal;color:var(--gold)}
+.hero-price{font-size:.95rem;color:var(--gold);margin-bottom:16px;animation:fadeUp .6s .15s ease both;font-weight:500;letter-spacing:.5px}
+.hero-sub{font-size:1rem;color:#aaa89a;max-width:540px;margin-bottom:40px;animation:fadeUp .6s .2s ease both;line-height:1.9}
+.hero-actions{display:flex;gap:16px;flex-wrap:wrap;animation:fadeUp .6s .3s ease both}
+body[dir="rtl"] .hero-actions{flex-direction:row-reverse}
+.btn-primary{display:inline-flex;align-items:center;gap:10px;background:var(--gold);color:var(--black);text-decoration:none;padding:16px 32px;border-radius:4px;font-size:1rem;font-weight:500;transition:all .2s;white-space:nowrap;min-height:48px}
+.btn-primary:hover{background:var(--gold-light);transform:translateY(-1px)}
+.btn-whatsapp{display:inline-flex;align-items:center;gap:10px;background:#25D366;border:1px solid #25D366;color:#fff;text-decoration:none;padding:16px 28px;border-radius:4px;font-size:1rem;font-weight:500;transition:all .2s;white-space:nowrap;min-height:48px}
+.btn-whatsapp:hover{background:#1ebe5a;transform:translateY(-1px)}
+.hero-trust{margin-top:44px;display:flex;gap:24px;flex-wrap:wrap;animation:fadeUp .6s .4s ease both}
+body[dir="rtl"] .hero-trust{flex-direction:row-reverse}
+.trust-item{display:flex;align-items:center;gap:8px;font-size:.82rem;color:var(--gray)}
+.trust-item .check{color:var(--gold)}
 
-  .wrapper {
-    padding: 40px 20px;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    z-index: 2;
-  }
+/* SECTIONS */
+.section{padding:80px 40px;max-width:1200px;margin:0 auto}
+.section-label{font-size:.75rem;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:12px}
+h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,4vw,2.8rem);font-weight:700;line-height:1.2;margin-bottom:16px}
+.section-sub{color:var(--gray);max-width:540px;margin-bottom:40px;font-size:.95rem;line-height:1.8}
 
-  .container {
-    width: 100%;
-    max-width: 580px;
-    animation: fadeInUp 0.8s ease-out;
-  }
+/* DESTINATIONS */
+.destinations-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:2px;margin-top:40px}
+.dest-card{background:var(--card);padding:36px 28px;position:relative;overflow:hidden;transition:background .3s;border:1px solid #1a1a14}
+.dest-card:hover{background:#161610}
+.dest-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:var(--gold);transform:scaleX(0);transition:transform .3s;transform-origin:left}
+body[dir="rtl"] .dest-card::after{transform-origin:right}
+.dest-card:hover::after{transform:scaleX(1)}
+.dest-icon{font-size:2rem;margin-bottom:16px}
+.dest-name{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:700;margin-bottom:8px}
+.dest-desc{font-size:.85rem;color:var(--gray);line-height:1.7;margin-bottom:16px}
+.dest-price{font-size:.8rem;color:var(--gold);letter-spacing:.5px;font-weight:500}
 
-  @keyframes fadeInUp {
-    from {
-      opacity: 0;
-      transform: translateY(30px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
+/* NICHES */
+.niches-section{padding:80px 40px;background:#0C0C08;border-top:1px solid #1a1a14;border-bottom:1px solid #1a1a14}
+.niches-inner{max-width:1200px;margin:0 auto}
+.niches-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2px;margin-top:40px}
+.niche-card{background:#111;padding:32px 28px;border:1px solid #1a1a14;position:relative;overflow:hidden;transition:background .3s}
+.niche-card:hover{background:#161610}
+.niche-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px}
+.niche-card:nth-child(1)::before{background:#C9A84C}
+.niche-card:nth-child(2)::before{background:#2ECC71}
+.niche-card:nth-child(3)::before{background:#3498DB}
+.niche-icon{font-size:2rem;margin-bottom:16px}
+.niche-title{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:700;margin-bottom:12px}
+.niche-desc{font-size:.85rem;color:var(--gray);line-height:1.8;margin-bottom:16px}
+.niche-tags{display:flex;gap:8px;flex-wrap:wrap}
+.niche-tag{font-size:.72rem;background:#1a1a14;color:var(--gold);padding:4px 10px;border-radius:2px;border:1px solid #C9A84C33}
 
-  /* Logo et Header */
-  .logo-container {
-    text-align: center;
-    margin-bottom: 50px;
-    animation: glow 3s ease-in-out infinite;
-  }
+/* WHY */
+.why-section{padding:80px 40px}
+.why-inner{max-width:1200px;margin:0 auto}
+.why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:40px;margin-top:50px}
+.why-num{font-family:'Cormorant Garamond',serif;font-size:3rem;color:#1e1e18;font-weight:700;line-height:1;margin-bottom:12px}
+.why-title{font-size:1rem;font-weight:500;margin-bottom:8px}
+.why-desc{font-size:.85rem;color:var(--gray);line-height:1.7}
 
-  @keyframes glow {
-    0%, 100% {
-      filter: drop-shadow(0 0 20px var(--glow));
-    }
-    50% {
-      filter: drop-shadow(0 0 35px var(--glow));
-    }
-  }
+/* TESTIMONIALS */
+.trust-section{padding:80px 40px;background:#0C0C08;border-top:1px solid #1a1a14;border-bottom:1px solid #1a1a14}
+.trust-inner{max-width:1200px;margin:0 auto}
+.testimonials{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:2px;margin-top:40px}
+.testi-card{background:#111;padding:28px;border:1px solid #1a1a14;border-radius:4px;transition:border-color .2s}
+.testi-card:hover{border-color:#C9A84C44}
+.testi-stars{color:var(--gold);font-size:1rem;margin-bottom:12px;letter-spacing:3px}
+.testi-text{font-size:.88rem;color:#ccc;line-height:1.8;margin-bottom:16px;font-style:italic}
+.testi-author{font-size:.78rem;color:var(--gold);font-weight:500}
 
-  .logo-symbol {
-    width: 80px;
-    height: 80px;
-    margin: 0 auto 20px;
-    background: radial-gradient(circle, var(--gold) 0%, transparent 70%);
-    border-radius: 50%;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+/* ZONES */
+.zones-list{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}
+.zone-tag{border:1px solid #2a2a20;color:#aaa898;padding:8px 16px;border-radius:3px;font-size:.82rem;transition:all .2s}
+.zone-tag:hover{border-color:var(--gold);color:var(--gold)}
 
-  .logo-symbol::before {
-    content: '';
-    width: 50px;
-    height: 50px;
-    border: 2px solid var(--gold);
-    border-radius: 50%;
-    position: absolute;
-  }
+/* FAQ */
+.faq-section{padding:80px 40px;background:#0C0C08;border-top:1px solid #1a1a14;border-bottom:1px solid #1a1a14}
+.faq-inner{max-width:800px;margin:0 auto}
+.faq-list{margin-top:40px;display:flex;flex-direction:column;gap:2px}
+.faq-item{background:#111;border:1px solid #1a1a14;border-radius:4px;overflow:hidden;transition:border-color .2s}
+.faq-item:hover{border-color:#C9A84C44}
+.faq-q{padding:20px 24px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;font-size:.95rem;color:#ddd;font-weight:500;user-select:none;min-height:48px}
+.faq-q:hover{color:#fff}
+.faq-icon{color:var(--gold);font-size:1.4rem;font-weight:300;flex-shrink:0;transition:transform .3s;line-height:1}
+.faq-item.open .faq-icon{transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease,padding .35s ease;padding:0 24px;font-size:.88rem;color:#aaa;line-height:1.8}
+.faq-item.open .faq-a{max-height:400px;padding:0 24px 20px}
 
-  .logo-symbol::after {
-    content: '';
-    width: 30px;
-    height: 30px;
-    background: conic-gradient(from 0deg, transparent, var(--gold-light), transparent);
-    border-radius: 50%;
-    animation: rotate 4s linear infinite;
-  }
+/* CTA */
+.cta-section{padding:100px 40px;text-align:center;position:relative;overflow:hidden}
+.cta-section::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 60% at 50% 50%,#C8A96E07 0%,transparent 70%);pointer-events:none}
+.cta-section h2{margin-bottom:16px}
+.cta-section .cta-sub{color:var(--gray);margin-bottom:12px;font-size:1rem}
+.cta-section .cta-price{color:var(--gold);margin-bottom:36px;font-size:.9rem;font-weight:500}
+.cta-phone{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,6vw,3.5rem);font-weight:700;color:var(--gold);text-decoration:none;display:block;margin-bottom:30px;letter-spacing:2px;transition:color .2s;white-space:nowrap}
+.cta-phone:hover{color:var(--gold-light)}
+.cta-buttons{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
 
-  @keyframes rotate {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
-  }
+/* FOOTER */
+footer{border-top:1px solid #1a1a14;padding:40px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px}
+footer p{font-size:.8rem;color:#555548}
+.footer-links{display:flex;gap:20px}
+.footer-links a{font-size:.8rem;color:#555548;text-decoration:none}
+.footer-links a:hover{color:var(--gold)}
 
-  .logo-text {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 14px;
-    letter-spacing: 4px;
-    text-transform: uppercase;
-    color: var(--white-muted);
-    margin-bottom: 4px;
-  }
+/* FLOATING */
+.floating-call{position:fixed;bottom:30px;right:30px;z-index:200;display:flex;flex-direction:column;align-items:flex-end;gap:10px}
+body[dir="rtl"] .floating-call{right:auto;left:30px;align-items:flex-start}
+.float-btn{display:flex;align-items:center;gap:10px;padding:14px 20px;border-radius:50px;text-decoration:none;font-size:.9rem;font-weight:500;box-shadow:0 4px 20px rgba(0,0,0,.5);transition:transform .2s;min-height:48px}
+.float-btn:hover{transform:scale(1.04)}
+.float-call{background:var(--gold);color:var(--black)}
+.float-wa{background:#128C7E;color:#fff}
 
-  .logo-brand {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 42px;
-    font-weight: 300;
-    letter-spacing: 8px;
-    text-transform: uppercase;
-    color: var(--white);
-    background: linear-gradient(135deg, var(--white) 0%, var(--gold-light) 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-  }
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
 
-  /* Card principale */
-  .card {
-    background: linear-gradient(135deg, var(--navy-medium) 0%, var(--navy-light) 100%);
-    border-radius: 24px;
-    padding: 50px 40px;
-    box-shadow: 
-      0 20px 60px rgba(0,0,0,0.5),
-      inset 0 1px 0 rgba(255,255,255,0.1);
-    border: 1px solid rgba(212, 175, 55, 0.2);
-    position: relative;
-    overflow: hidden;
-  }
+/* LANG TOGGLE */
+.t{display:none}.t.on{display:inline}
+.tb{display:none}.tb.on{display:block}
 
-  .card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.1), transparent);
-    animation: shine 8s ease-in-out infinite;
-  }
-
-  @keyframes shine {
-    0%, 100% { left: -100%; }
-    50% { left: 100%; }
-  }
-
-  h1 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 32px;
-    font-weight: 300;
-    margin: 0 0 12px;
-    color: var(--white);
-    letter-spacing: 1px;
-  }
-
-  .subtitle {
-    font-size: 15px;
-    color: var(--white-muted);
-    margin: 0 0 40px;
-    line-height: 1.6;
-    font-weight: 300;
-  }
-
-  /* Form elements */
-  label {
-    font-size: 12px;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    margin-bottom: 10px;
-    display: block;
-    color: var(--gold-light);
-    font-weight: 500;
-  }
-
-  input,
-  textarea,
-  select {
-    width: 100%;
-    padding: 16px 18px;
-    margin-bottom: 28px;
-    border-radius: 12px;
-    border: 1px solid rgba(212, 175, 55, 0.3);
-    font-size: 15px;
-    background: rgba(10, 22, 40, 0.6);
-    color: var(--white-soft);
-    font-family: 'Montserrat', sans-serif;
-    transition: all 0.3s ease;
-    backdrop-filter: blur(10px);
-  }
-
-  input:focus,
-  textarea:focus,
-  select:focus {
-    outline: none;
-    border-color: var(--gold);
-    background: rgba(10, 22, 40, 0.8);
-    box-shadow: 0 0 20px var(--glow);
-  }
-
-  input::placeholder,
-  textarea::placeholder {
-    color: var(--white-muted);
-  }
-
-  textarea {
-    resize: vertical;
-    min-height: 100px;
-    font-family: 'Montserrat', sans-serif;
-  }
-
-  select {
-    cursor: pointer;
-    appearance: none;
-    background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L6 6L11 1' stroke='%23d4af37' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");
-    background-repeat: no-repeat;
-    background-position: right 18px center;
-    padding-right: 45px;
-  }
-
-  select option {
-    background: var(--navy-medium);
-    color: var(--white);
-  }
-
-  /* Button */
-  button {
-    width: 100%;
-    padding: 18px;
-    border-radius: 12px;
-    border: none;
-    background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
-    color: var(--navy-deep);
-    font-size: 15px;
-    font-weight: 600;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    font-family: 'Montserrat', sans-serif;
-    position: relative;
-    overflow: hidden;
-  }
-
-  button::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
-    transition: left 0.5s ease;
-  }
-
-  button:hover::before {
-    left: 100%;
-  }
-
-  button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 10px 30px var(--glow);
-  }
-
-  button:active {
-    transform: translateY(0);
-  }
-
-  /* Footer */
-  .footer {
-    margin-top: 30px;
-    text-align: center;
-    font-size: 13px;
-    color: var(--white-muted);
-    line-height: 1.6;
-    font-weight: 300;
-  }
-
-  .signature {
-    margin-top: 40px;
-    text-align: center;
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 14px;
-    letter-spacing: 3px;
-    color: var(--gold);
-    text-transform: uppercase;
-    opacity: 0.85;
-  }
-
-  .signature span {
-    display: block;
-    font-size: 11px;
-    margin-top: 6px;
-    letter-spacing: 2px;
-    color: var(--white-muted);
-  }
-
-  /* Responsive */
-  @media (max-width: 640px) {
-    .wrapper {
-      padding: 30px 16px;
-    }
-
-    .card {
-      padding: 35px 24px;
-    }
-
-    h1 {
-      font-size: 26px;
-    }
-
-    .logo-brand {
-      font-size: 34px;
-      letter-spacing: 6px;
-    }
-
-    .logo-symbol {
-      width: 60px;
-      height: 60px;
-    }
-  }
+@media(max-width:600px){
+  nav,footer{padding:20px}
+  .lang-bar{padding:8px 20px}
+  .hero{padding:50px 20px;min-height:auto}
+  .section,.niches-section,.why-section,.trust-section,.faq-section,.cta-section{padding:60px 20px}
+  footer{flex-direction:column;text-align:center}
+  .floating-call{bottom:20px;right:16px}
+  .float-btn .lbl{display:none}
+}
 </style>
 </head>
-
 <body>
 
-<div class="wrapper">
-  <div class="container">
-    <!-- Logo -->
-    <div class="logo-container">
-      <div class="logo-symbol"></div>
-      <div class="logo-text">Agence Digitale</div>
-      <div class="logo-brand">Caviar</div>
+<!-- LANG BAR -->
+<div class="lang-bar">
+  <button class="lang-btn active" onclick="L('fr',this)">FR 🇫🇷</button>
+  <button class="lang-btn" onclick="L('en',this)">EN 🇬🇧</button>
+  <button class="lang-btn" onclick="L('ar',this)">AR 🇸🇦</button>
+</div>
+
+<!-- URGENCE BAR -->
+<div class="urgence-bar">
+  <span class="tb on" data-l="fr">Disponible 24h/24 — Réservation immédiate → <a href="tel:+33745624032"><span style="white-space:nowrap;direction:ltr;unicode-bidi:embed;display:inline-block"><bdi style="direction:ltr;unicode-bidi:isolate;white-space:nowrap">07 45 62 40 32</bdi></span></a></span>
+  <span class="tb" data-l="en">Available 24/7 — Book your airport transfer now → <a href="tel:+33745624032"><span style="white-space:nowrap;direction:ltr;unicode-bidi:embed;display:inline-block"><bdi style="direction:ltr;unicode-bidi:isolate;white-space:nowrap">07 45 62 40 32</bdi></span></a></span>
+  <span class="tb" data-l="ar">خدمة بالعربية — متاح 24/7 — احجز الآن → <a href="tel:+33745624032"><span style="white-space:nowrap;direction:ltr;unicode-bidi:embed;display:inline-block"><bdi style="direction:ltr;unicode-bidi:isolate;white-space:nowrap">07 45 62 40 32</bdi></span></a></span>
+</div>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">VTC<span> Paris Transfert</span></div>
+  <a href="tel:+33745624032" class="nav-cta">
+    <span>📞</span>
+    <span class="t on" data-l="fr">Appeler maintenant</span>
+    <span class="t" data-l="en">Call now</span>
+    <span class="t" data-l="ar">اتصل الآن</span>
+  </a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-grid"></div>
+  <div class="hero-content">
+
+    <div class="hero-badge">
+      <span class="t on" data-l="fr">Chauffeur VTC — Île-de-France</span>
+      <span class="t" data-l="en">English-speaking Private Driver — Paris</span>
+      <span class="t" data-l="ar">سائق خاص يتحدث العربية — باريس</span>
     </div>
 
-    <!-- Card -->
-    <div class="card">
-      <h1>Parlons de votre projet</h1>
-      <p class="subtitle">
-        Quelques questions essentielles pour voir si c'est juste de travailler ensemble.
-      </p>
+    <h1>
+      <span class="tb on" data-l="fr">VTC Paris Aéroport<br><em>CDG · Orly · Disney</em><br>Tarif fixe 24h/24</span>
+      <span class="tb" data-l="en">Paris Airport Transfer<br><em>CDG · Orly · Disney</em><br>Fixed fare, always on time</span>
+      <span class="tb" data-l="ar">تاكسي باريس المطار<br><em>CDG · أورلي · ديزني</em><br>سعر ثابت، خدمة بالعربية</span>
+    </h1>
 
-      <form id="caviarForm">
-        <label>Nom & Prénom</label>
-        <input type="text" name="name" placeholder="Jean Dupont" required>
+    <p class="hero-price">
+      <span class="t on" data-l="fr">À partir de 35€ — Tarif fixe annoncé avant la course, sans compteur</span>
+      <span class="t" data-l="en">From €35 — Fixed fare with no hidden fees, no meter, no surprises</span>
+      <span class="t" data-l="ar">ابتداءً من 35€ — سعر ثابت محدد مسبقًا، بدون عداد ولا رسوم مخفية</span>
+    </p>
 
-        <label>Email professionnel</label>
-        <input type="email" name="email" placeholder="vous@entreprise.com" required>
+    <p class="hero-sub">
+      <span class="tb on" data-l="fr">Chauffeur privé professionnel disponible 24h/24, 7j/7 pour vos transferts CDG, Orly et Disneyland Paris. Suivi de vol inclus, ponctualité garantie. Réservation rapide par téléphone ou WhatsApp.</span>
+      <span class="tb" data-l="en">Your trusted English-speaking VTC (private hire car) in Paris, available 24/7 for CDG, Orly and Disneyland transfers. Fixed fare agreed upfront — no meter, no surge pricing. Real-time flight tracking included. Call or WhatsApp us now to book in 2 minutes.</span>
+      <span class="tb" data-l="ar">أهلاً وسهلاً بضيوفنا من الخليج والعالم العربي. نقدم خدمة سيارة خاصة مع سائق (VTC) في باريس، متاحة على مدار الساعة لنقلك من وإلى مطار CDG وأورلي وديزني لاند. سعر ثابت مُحدد مسبقاً بدون عداد. ندفع نقداً أو بالبطاقة. تواصل معنا بالعربية عبر واتساب في دقيقتين.</span>
+    </p>
 
-        <label>Votre activité</label>
-        <input type="text" name="activity" placeholder="Coach, e-commerce, startup...">
+    <div class="hero-actions">
+      <a href="tel:+33745624032" class="btn-primary"><span>📞</span><span style="white-space:nowrap;direction:ltr;unicode-bidi:embed;display:inline-block"><bdi style="direction:ltr;unicode-bidi:isolate;white-space:nowrap">07 45 62 40 32</bdi></span></a>
+      <a href="https://wa.me/33745624032?text=Bonjour%2C%20je%20souhaite%20r%C3%A9server%20un%20VTC." class="btn-whatsapp wa-link" target="_blank">
+        <span>💬</span>
+        <span class="t on" data-l="fr">WhatsApp</span>
+        <span class="t" data-l="en">WhatsApp</span>
+        <span class="t" data-l="ar">واتساب بالعربية</span>
+      </a>
+    </div>
 
-        <label>Besoin principal</label>
-        <select id="need" name="need">
-          <option>Branding / positionnement</option>
-          <option>Landing page / site</option>
-          <option>Acquisition / contenu</option>
-          <option>Tunnel de vente</option>
-          <option>Accompagnement stratégique</option>
-        </select>
+    <div class="hero-trust">
+      <div class="trust-item"><span class="check">✓</span>
+        <span class="t on" data-l="fr">Tarif fixe garanti</span>
+        <span class="t" data-l="en">Fixed fare guaranteed</span>
+        <span class="t" data-l="ar">سعر ثابت مضمون</span>
+      </div>
+      <div class="trust-item"><span class="check">✓</span>
+        <span class="t on" data-l="fr">Disponible 24h/24</span>
+        <span class="t" data-l="en">Available 24/7</span>
+        <span class="t" data-l="ar">متاح على مدار الساعة</span>
+      </div>
+      <div class="trust-item"><span class="check">✓</span>
+        <span class="t on" data-l="fr">Suivi vol en temps réel</span>
+        <span class="t" data-l="en">Real-time flight tracking</span>
+        <span class="t" data-l="ar">تتبع الرحلة لحظة بلحظة</span>
+      </div>
+      <div class="trust-item"><span class="check">✓</span>
+        <span class="t on" data-l="fr">Service en français, anglais et arabe</span>
+        <span class="t" data-l="en">English-speaking driver</span>
+        <span class="t" data-l="ar">خدمة كاملة باللغة العربية</span>
+      </div>
+    </div>
 
-        <label>Votre situation actuelle</label>
-        <textarea name="situation" placeholder="Décrivez brièvement où vous en êtes et ce que vous cherchez à accomplir..."></textarea>
+  </div>
+</section>
 
-        <label>Budget</label>
-        <select id="budget" name="budget">
-          <option value="low">&lt; 1 000 €</option>
-          <option value="mid">1 000 – 3 000 €</option>
-          <option value="high">3 000 – 7 000 €</option>
-          <option value="premium">7 000 € et +</option>
-        </select>
+<!-- DESTINATIONS -->
+<section class="section">
+  <div class="section-label">
+    <span class="t on" data-l="fr">Destinations</span>
+    <span class="t" data-l="en">Where we take you</span>
+    <span class="t" data-l="ar">وجهاتنا</span>
+  </div>
+  <h2>
+    <span class="tb on" data-l="fr">Tous vos transferts<br>pris en charge</span>
+    <span class="tb" data-l="en">Every transfer,<br>perfectly handled</span>
+    <span class="tb" data-l="ar">كل رحلاتك<br>في أيدٍ أمينة</span>
+  </h2>
+  <p class="section-sub">
+    <span class="tb on" data-l="fr">CDG, Orly, Disneyland, gares TGV — nous couvrons tout Paris et l'Île-de-France.</span>
+    <span class="tb" data-l="en">CDG, Orly, Disneyland, TGV stations — we cover all of Paris and the greater Île-de-France area.</span>
+    <span class="tb" data-l="ar">CDG وأورلي وديزني لاند ومحطات TGV — نغطي باريس بأكملها وضواحيها.</span>
+  </p>
+  <div class="destinations-grid">
 
-        <label>Êtes-vous prêt(e) à vous impliquer ?</label>
-        <select id="commitment" name="commitment">
-          <option value="yes">Oui</option>
-          <option value="hesitate">J'hésite encore</option>
-          <option value="no">Non</option>
-        </select>
+    <div class="dest-card">
+      <div class="dest-icon">✈️</div>
+      <div class="dest-name">CDG — Charles de Gaulle</div>
+      <div class="dest-desc">
+        <span class="tb on" data-l="fr">Tous terminaux (T1, T2, T3). Suivi de vol inclus — votre chauffeur vous attend même en cas de retard. Prise en charge dans le hall d'arrivée.</span>
+        <span class="tb" data-l="en">All terminals (T1, T2, T3). Flight tracking included — your driver waits in the arrival hall no matter how late your flight is. No stress, no rush.</span>
+        <span class="tb" data-l="ar">جميع الصالات (T1، T2، T3). تتبع رحلتك مشمول — سائقك ينتظرك في قاعة الوصول مهما تأخرت. راحة تامة بدون أي قلق.</span>
+      </div>
+      <div class="dest-price">
+        <span class="t on" data-l="fr">À partir de 35€ · Tarif fixe</span>
+        <span class="t" data-l="en">From €35 · Fixed fare</span>
+        <span class="t" data-l="ar">من 35€ · سعر ثابت</span>
+      </div>
+    </div>
 
-        <button type="submit">Envoyer ma demande</button>
-      </form>
+    <div class="dest-card">
+      <div class="dest-icon">🛫</div>
+      <div class="dest-name">Orly — Aéroport de Paris</div>
+      <div class="dest-desc">
+        <span class="tb on" data-l="fr">Terminaux Orly 1, 2, 3, 4. Départ de votre domicile à l'heure précise. Ponctualité assurée pour ne jamais rater votre vol.</span>
+        <span class="tb" data-l="en">Orly terminals 1, 2, 3, 4. Door-to-door pickup at the exact time you need. We ensure you never miss your flight.</span>
+        <span class="tb" data-l="ar">صالات أورلي 1، 2، 3، 4. الاصطحاب من باب منزلك في الوقت المحدد بدقة. نضمن أن لا تفوتك رحلتك أبدًا.</span>
+      </div>
+      <div class="dest-price">
+        <span class="t on" data-l="fr">À partir de 30€ · Tarif fixe</span>
+        <span class="t" data-l="en">From €30 · Fixed fare</span>
+        <span class="t" data-l="ar">من 30€ · سعر ثابت</span>
+      </div>
+    </div>
 
-      <div class="footer">
-        Chaque demande est lue personnellement.<br>
-        Si c'est aligné, réponse sous 48h.
+    <div class="dest-card">
+      <div class="dest-icon">🏰</div>
+      <div class="dest-name">Disneyland Paris</div>
+      <div class="dest-desc">
+        <span class="tb on" data-l="fr">Disney Village, hôtels Disney, Marne-la-Vallée. Sièges enfants disponibles, vans pour les groupes. Commencez vos vacances en famille dès la montée en voiture.</span>
+        <span class="tb" data-l="en">Disney Village, Disney Hotels, Marne-la-Vallée. Child seats and vans available for families. Start your magical holiday the moment you step in the car.</span>
+        <span class="tb" data-l="ar">ديزني فيليج، فنادق ديزني، مارن-لا-فاليه. مقاعد أطفال وفانات للعائلات. ابدأ عطلتك السحرية منذ اللحظة الأولى في السيارة.</span>
+      </div>
+      <div class="dest-price">
+        <span class="t on" data-l="fr">À partir de 50€ · Sièges enfants inclus</span>
+        <span class="t" data-l="en">From €50 · Child seats available</span>
+        <span class="t" data-l="ar">من 50€ · مقاعد أطفال متاحة</span>
+      </div>
+    </div>
+
+    <div class="dest-card">
+      <div class="dest-icon">🗼</div>
+      <div class="dest-name">
+        <span class="t on" data-l="fr">Paris & Île-de-France</span>
+        <span class="t" data-l="en">Paris & Greater Region</span>
+        <span class="t" data-l="ar">باريس وضواحيها</span>
+      </div>
+      <div class="dest-desc">
+        <span class="tb on" data-l="fr">Toutes adresses parisiennes, banlieue, gares TGV, événements professionnels. Facturation entreprise disponible.</span>
+        <span class="tb" data-l="en">All Paris addresses, suburbs, TGV stations, corporate events, hotel pickups. Full business invoicing available for expense reports.</span>
+        <span class="tb" data-l="ar">جميع عناوين باريس، الضواحي، المحطات، الفنادق، المناسبات. فواتير تجارية متاحة لرجال الأعمال.</span>
+      </div>
+      <div class="dest-price">
+        <span class="t on" data-l="fr">Devis immédiat · Facture disponible</span>
+        <span class="t" data-l="en">Instant quote · Invoice available</span>
+        <span class="t" data-l="ar">عرض فوري · فاتورة تجارية</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- POUR QUI -->
+<section class="niches-section">
+  <div class="niches-inner">
+    <div class="section-label">
+      <span class="t on" data-l="fr">Pour qui ?</span>
+      <span class="t" data-l="en">Who we serve</span>
+      <span class="t" data-l="ar">لمن نقدم خدمتنا؟</span>
+    </div>
+    <h2>
+      <span class="tb on" data-l="fr">Un service pensé<br>pour chaque client</span>
+      <span class="tb" data-l="en">A service built<br>around your needs</span>
+      <span class="tb" data-l="ar">خدمة مصممة<br>خصيصًا لك</span>
+    </h2>
+    <p class="section-sub">
+      <span class="tb on" data-l="fr">Que vous voyagiez seul, en famille ou pour affaires — nous avons le véhicule et le service adaptés.</span>
+      <span class="tb" data-l="en">Whether you're traveling solo, with family, or on business — we have the right vehicle and the right service for you.</span>
+      <span class="tb" data-l="ar">سواء كنت مسافرًا منفردًا أو مع عائلتك أو في رحلة عمل — لدينا السيارة والخدمة المناسبة لك.</span>
+    </p>
+    <div class="niches-grid">
+
+      <div class="niche-card">
+        <div class="niche-icon">🌙</div>
+        <div class="niche-title">
+          <span class="t on" data-l="fr">Clientèle internationale & Moyen-Orient</span>
+          <span class="t" data-l="en">International & Middle East travelers</span>
+          <span class="t" data-l="ar">العملاء الدوليون وضيوف الخليج</span>
+        </div>
+        <div class="niche-desc">
+          <span class="tb on" data-l="fr">Nous parlons français, anglais et arabe. Tarif fixe et transparent — aucune mauvaise surprise à l'arrivée. Contactez-nous directement en arabe sur WhatsApp pour une réservation rapide et sans stress.</span>
+          <span class="tb" data-l="en">We speak English fluently and understand your travel needs. Fixed fare with full transparency — the price you're quoted is exactly what you pay. WhatsApp booking available for quick and easy reservations.</span>
+          <span class="tb" data-l="ar">نتحدث العربية ونفهم احتياجات ضيوفنا من دول الخليج والعالم العربي. سعر ثابت وشفاف تمامًا — لا مفاجآت ولا عداد. تواصل معنا مباشرة بالعربية على واتساب لحجز سريع ومريح.</span>
+        </div>
+        <div class="niche-tags">
+          <span class="niche-tag"><span class="t on" data-l="fr">Service en arabe</span><span class="t" data-l="en">English-speaking</span><span class="t" data-l="ar">خدمة بالعربية</span></span>
+          <span class="niche-tag"><span class="t on" data-l="fr">Tarif transparent</span><span class="t" data-l="en">Fixed fare</span><span class="t" data-l="ar">سعر ثابت</span></span>
+          <span class="niche-tag">WhatsApp</span>
+        </div>
       </div>
 
-      <div class="signature">
-        Business Caviar
-        <span>Éveil & Happy Money</span>
+      <div class="niche-card">
+        <div class="niche-icon">👨‍👩‍👧‍👦</div>
+        <div class="niche-title">
+          <span class="t on" data-l="fr">Familles & voyages Disneyland</span>
+          <span class="t" data-l="en">Families & Disneyland trips</span>
+          <span class="t" data-l="ar">العائلات ورحلات ديزني لاند</span>
+        </div>
+        <div class="niche-desc">
+          <span class="tb on" data-l="fr">Sièges enfants disponibles sur demande. Vans spacieux pour les familles nombreuses et les grands bagages. Pas de stress pour les enfants — nous nous occupons de tout pour que vos vacances commencent dès le départ.</span>
+          <span class="tb" data-l="en">Child seats available on request at no extra charge. Spacious vans for large families with lots of luggage. No stress for the kids — we handle everything so your holiday starts the moment you leave home.</span>
+          <span class="tb" data-l="ar">مقاعد أطفال متاحة عند الطلب بدون رسوم إضافية. فانات واسعة للعائلات الكبيرة ذات الأمتعة الكثيرة. لا توتر ولا إجهاد للأطفال — نتولى كل شيء حتى تبدأ عطلتكم من لحظة المغادرة.</span>
+        </div>
+        <div class="niche-tags">
+          <span class="niche-tag"><span class="t on" data-l="fr">Sièges enfants</span><span class="t" data-l="en">Child seats</span><span class="t" data-l="ar">مقاعد أطفال</span></span>
+          <span class="niche-tag"><span class="t on" data-l="fr">Van disponible</span><span class="t" data-l="en">Van available</span><span class="t" data-l="ar">فان متاح</span></span>
+          <span class="niche-tag"><span class="t on" data-l="fr">Grands bagages</span><span class="t" data-l="en">Large luggage</span><span class="t" data-l="ar">أمتعة كبيرة</span></span>
+        </div>
+      </div>
+
+      <div class="niche-card">
+        <div class="niche-icon">💼</div>
+        <div class="niche-title">
+          <span class="t on" data-l="fr">Voyageurs d'affaires</span>
+          <span class="t" data-l="en">Business travelers</span>
+          <span class="t" data-l="ar">رجال الأعمال والمسافرون المهنيون</span>
+        </div>
+        <div class="niche-desc">
+          <span class="tb on" data-l="fr">Ponctualité garantie — c'est notre engagement numéro un. Factures entreprise fournies pour vos notes de frais. Véhicule confortable et climatisé pour travailler pendant le trajet. Idéal pour les déplacements professionnels réguliers.</span>
+          <span class="tb" data-l="en">Punctuality is our top commitment — we're always there before you are. Full business invoices provided for expense reports. Comfortable, air-conditioned vehicle so you can work or relax during the journey. Ideal for frequent business travelers.</span>
+          <span class="tb" data-l="ar">الالتزام بالمواعيد هو تعهدنا الأول — نكون دائمًا قبل الوقت المحدد. فواتير تجارية كاملة لتقارير المصروفات. سيارة مريحة ومكيفة للعمل أو الاسترخاء خلال الرحلة. مثالي لرجال الأعمال الذين يسافرون بانتظام.</span>
+        </div>
+        <div class="niche-tags">
+          <span class="niche-tag"><span class="t on" data-l="fr">Facture entreprise</span><span class="t" data-l="en">Business invoice</span><span class="t" data-l="ar">فاتورة تجارية</span></span>
+          <span class="niche-tag"><span class="t on" data-l="fr">Toujours à l'heure</span><span class="t" data-l="en">Always on time</span><span class="t" data-l="ar">دقة في المواعيد</span></span>
+          <span class="niche-tag">Wi-Fi</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- POURQUOI -->
+<section class="why-section">
+  <div class="why-inner">
+    <div class="section-label">
+      <span class="t on" data-l="fr">Pourquoi nous choisir</span>
+      <span class="t" data-l="en">Why choose us</span>
+      <span class="t" data-l="ar">لماذا تختارنا</span>
+    </div>
+    <h2>
+      <span class="tb on" data-l="fr">La différence<br>d'un vrai professionnel</span>
+      <span class="tb" data-l="en">The difference of<br>a true professional</span>
+      <span class="tb" data-l="ar">الفرق الذي يصنعه<br>السائق المحترف</span>
+    </h2>
+    <div class="why-grid">
+      <div>
+        <div class="why-num">01</div>
+        <div class="why-title">
+          <span class="t on" data-l="fr">Tarif fixe — zéro surprise</span>
+          <span class="t" data-l="en">Fixed fare — zero surprises</span>
+          <span class="t" data-l="ar">سعر ثابت — صفر مفاجآت</span>
+        </div>
+        <div class="why-desc">
+          <span class="tb on" data-l="fr">Le prix est annoncé avant la course. Pas de compteur, pas de majoration heure de pointe, pas de supplément aéroport. À partir de 35€ pour CDG.</span>
+          <span class="tb" data-l="en">The price is agreed before the ride. No meter running, no peak time surcharge, no hidden airport fee. From €35 for CDG. What you're quoted is exactly what you pay.</span>
+          <span class="tb" data-l="ar">السعر يُحدد قبل الرحلة. لا عداد، لا رسوم إضافية في أوقات الذروة، لا رسوم مطار مخفية. ابتداءً من 35€ لمطار CDG. ما يُقال لك هو ما تدفعه بالضبط.</span>
+        </div>
+      </div>
+      <div>
+        <div class="why-num">02</div>
+        <div class="why-title">
+          <span class="t on" data-l="fr">Disponible 24h/24 — même à 4h du matin</span>
+          <span class="t" data-l="en">Available 24/7 — even at 4am</span>
+          <span class="t" data-l="ar">متاح 24/7 — حتى في الساعة الرابعة صباحًا</span>
+        </div>
+        <div class="why-desc">
+          <span class="tb on" data-l="fr">Vol à 5h du matin, retour tardif à minuit — votre chauffeur est toujours là. Aucun créneau horaire n'est trop tôt ou trop tard.</span>
+          <span class="tb" data-l="en">5am flight, midnight return — your driver is always there. No time slot is too early or too late for us. We're here when you need us most.</span>
+          <span class="tb" data-l="ar">رحلة الساعة 5 صباحًا، عودة منتصف الليل — سائقك دائمًا حاضر. لا وقت مبكر جدًا ولا وقت متأخر جدًا بالنسبة لنا. نحن هنا عندما تحتاجنا.</span>
+        </div>
+      </div>
+      <div>
+        <div class="why-num">03</div>
+        <div class="why-title">
+          <span class="t on" data-l="fr">Suivi de vol en temps réel</span>
+          <span class="t" data-l="en">Real-time flight tracking</span>
+          <span class="t" data-l="ar">تتبع الرحلة في الوقت الفعلي</span>
+        </div>
+        <div class="why-desc">
+          <span class="tb on" data-l="fr">Retard de 45 minutes ? Votre chauffeur le sait avant vous et ajuste automatiquement sa prise en charge. Vous n'avez pas à l'appeler.</span>
+          <span class="tb" data-l="en">45-minute delay? Your driver knows before you do and automatically adjusts the pickup. You don't have to call or worry — it's all handled.</span>
+          <span class="tb" data-l="ar">تأخير 45 دقيقة؟ سائقك يعرف قبلك ويضبط وقت الاصطحاب تلقائيًا. لا داعي للاتصال أو القلق — كل شيء تحت السيطرة.</span>
+        </div>
+      </div>
+      <div>
+        <div class="why-num">04</div>
+        <div class="why-title">
+          <span class="t on" data-l="fr">Réservez en 2 minutes</span>
+          <span class="t" data-l="en">Book in 2 minutes</span>
+          <span class="t" data-l="ar">احجز في دقيقتين</span>
+        </div>
+        <div class="why-desc">
+          <span class="tb on" data-l="fr">Un appel ou un WhatsApp suffit. Tarif confirmé en 30 secondes. Service en français, anglais ou arabe selon votre préférence.</span>
+          <span class="tb" data-l="en">One phone call or WhatsApp message is all it takes. Price confirmed in 30 seconds. We respond in English, French or Arabic — whichever you prefer.</span>
+          <span class="tb" data-l="ar">مكالمة واحدة أو رسالة واتساب بالعربية تكفي. السعر مؤكد في 30 ثانية. نرد بالعربية أو الفرنسية أو الإنجليزية حسب تفضيلك.</span>
+        </div>
       </div>
     </div>
   </div>
+</section>
+
+<!-- TÉMOIGNAGES -->
+<section class="trust-section">
+  <div class="trust-inner">
+    <div class="section-label">
+      <span class="t on" data-l="fr">Avis clients</span>
+      <span class="t" data-l="en">What clients say</span>
+      <span class="t" data-l="ar">ماذا يقول عملاؤنا</span>
+    </div>
+    <h2>
+      <span class="tb on" data-l="fr">Ils nous font confiance</span>
+      <span class="tb" data-l="en">Trusted by travelers<br>from around the world</span>
+      <span class="tb" data-l="ar">يثقون بنا من<br>كل أنحاء العالم</span>
+    </h2>
+    <div class="testimonials">
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <div class="testi-text">
+          <span class="tb on" data-l="fr">"Vol retardé de 45 minutes, le chauffeur était toujours là à l'arrivée. Professionnel, véhicule impeccable, tarif exact comme annoncé. Je ne prends plus que ce service pour CDG."</span>
+          <span class="tb" data-l="en">"My flight was delayed by 45 minutes and the driver was still there waiting. Professional, spotless car, price exactly as quoted. This is now my go-to service for CDG transfers."</span>
+          <span class="tb" data-l="ar">"تأخرت رحلتي 45 دقيقة والسائق كان لا يزال ينتظرني عند الوصول. محترف، سيارة نظيفة، السعر تمامًا كما قيل لي. أصبح هذا خياري الوحيد لمطار CDG."</span>
+        </div>
+        <div class="testi-author">Mohammed A. — CDG → Paris 8e</div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <div class="testi-text">
+          <span class="tb on" data-l="fr">"Parfait pour notre famille de 5 avec 6 valises. Le van était spacieux, les sièges enfants installés avant notre arrivée. Les enfants ont adoré. Disneyland a commencé dès la voiture !"</span>
+          <span class="tb" data-l="en">"Perfect for our family of 5 with 6 suitcases. The van was spacious, child seats already installed. The kids loved it. Disneyland started the moment we got in the car!"</span>
+          <span class="tb" data-l="ar">"مثالي لعائلتنا المكونة من 5 أشخاص مع 6 حقائب. الفان كان واسعًا ومقاعد الأطفال مركبة مسبقًا. الأطفال أحبوه. بدأت رحلة ديزني لحظة صعودنا في السيارة!"</span>
+        </div>
+        <div class="testi-author">Sarah M. — Orly → Disneyland Paris</div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <div class="testi-text">
+          <span class="tb on" data-l="fr">"Chauffeur toujours à l'heure, facture fournie pour ma note de frais, conversation agréable. Mon VTC de confiance pour tous mes déplacements professionnels à Paris."</span>
+          <span class="tb" data-l="en">"Always on time, invoice provided for my expense report, pleasant conversation. My trusted VTC for all business travel in Paris. Highly recommend for corporate travelers."</span>
+          <span class="tb" data-l="ar">"دائمًا في الموعد، فاتورة كاملة لتقرير مصروفاتي، محادثة ممتعة. خياري الموثوق لجميع تنقلاتي المهنية في باريس. أنصح به بشدة لرجال الأعمال."</span>
+        </div>
+        <div class="testi-author">Jean-Philippe L. — CDG → La Défense</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ZONES -->
+<section class="section">
+  <div class="section-label">
+    <span class="t on" data-l="fr">Zone de service</span>
+    <span class="t" data-l="en">Service area</span>
+    <span class="t" data-l="ar">منطقة الخدمة</span>
+  </div>
+  <h2>
+    <span class="tb on" data-l="fr">Tout Paris<br>et Île-de-France</span>
+    <span class="tb" data-l="en">All of Paris<br>and Île-de-France</span>
+    <span class="tb" data-l="ar">باريس كاملة<br>وإيل دو فرانس</span>
+  </h2>
+  <div class="zones-list">
+    <span class="zone-tag">Paris 1er–20e</span>
+    <span class="zone-tag">Boulogne-Billancourt</span>
+    <span class="zone-tag">Neuilly-sur-Seine</span>
+    <span class="zone-tag">Versailles</span>
+    <span class="zone-tag">La Défense</span>
+    <span class="zone-tag">Levallois-Perret</span>
+    <span class="zone-tag">Saint-Denis</span>
+    <span class="zone-tag">Vincennes</span>
+    <span class="zone-tag">Créteil</span>
+    <span class="zone-tag">Montreuil</span>
+    <span class="zone-tag">Issy-les-Moulineaux</span>
+    <span class="zone-tag">Courbevoie</span>
+    <span class="zone-tag">Nanterre</span>
+    <span class="zone-tag">Marne-la-Vallée</span>
+    <span class="zone-tag">Roissy-en-France</span>
+    <span class="zone-tag">Villepinte</span>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-section">
+  <div class="faq-inner">
+    <div class="section-label">
+      <span class="t on" data-l="fr">Questions fréquentes</span>
+      <span class="t" data-l="en">Frequently asked questions</span>
+      <span class="t" data-l="ar">الأسئلة الشائعة</span>
+    </div>
+    <h2>
+      <span class="tb on" data-l="fr">Tout ce que vous<br>devez savoir</span>
+      <span class="tb" data-l="en">Everything you<br>need to know</span>
+      <span class="tb" data-l="ar">كل ما تحتاج<br>أن تعرفه</span>
+    </h2>
+    <div class="faq-list">
+
+      <!-- Q1 TARIF -->
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span class="t on" data-l="fr">Quel est le tarif pour un transfert CDG → Paris ?</span>
+          <span class="t" data-l="en">How much does a CDG → Paris transfer cost?</span>
+          <span class="t" data-l="ar">كم يكلف التنقل من مطار CDG إلى باريس؟</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-a">
+          <span class="tb on" data-l="fr">Le tarif commence à 35€ pour un transfert CDG → Paris, fixe et annoncé avant la course. Pas de compteur, pas de majoration. Appelez le <bdi style="direction:ltr;unicode-bidi:isolate;white-space:nowrap">07 45 62 40 32</bdi> pour un devis en 30 secondes.</span>
+          <span class="tb" data-l="en">Transfers from CDG start from €35, with a fixed price agreed before the ride. No meter, no surge pricing, no hidden fees. Call <bdi style="direction:ltr;unicode-bidi:isolate;white-space:nowrap">07 45 62 40 32</bdi> or WhatsApp us for an instant quote.</span>
+          <span class="tb" data-l="ar">التنقل من CDG يبدأ من 35€، سعر ثابت يُحدد قبل الرحلة. لا عداد، لا أسعار متذبذبة، لا رسوم مخفية. اتصل أو راسلنا على واتساب <bdi style="direction:ltr;unicode-bidi:isolate;white-space:nowrap">07 45 62 40 32</bdi> للحصول على عرض فوري.</span>
+        </div>
+      </div>
+
+      <!-- Q2 VOL RETARDÉ -->
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span class="t on" data-l="fr">Que se passe-t-il si mon vol est retardé ?</span>
+          <span class="t" data-l="en">What if my flight is delayed?</span>
+          <span class="t" data-l="ar">ماذا يحدث إذا تأخرت رحلتي؟</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-a">
+          <span class="tb on" data-l="fr">Votre chauffeur suit votre vol en temps réel grâce au numéro de vol. En cas de retard, il adapte automatiquement l'heure de prise en charge. Vous n'avez rien à faire — pas besoin d'appeler.</span>
+          <span class="tb" data-l="en">Your driver monitors your flight using real-time tracking tools. If there's a delay, he adjusts automatically. No need to call, no extra charges for waiting — it's all included in the price.</span>
+          <span class="tb" data-l="ar">سائقك يراقب رحلتك بأدوات تتبع آنية. في حالة التأخير، يضبط الوقت تلقائيًا. لا حاجة للاتصال، ولا رسوم إضافية للانتظار — كل ذلك مشمول في السعر.</span>
+        </div>
+      </div>
+
+      <!-- Q3 RÉSERVATION -->
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span class="t on" data-l="fr">Combien de temps à l'avance dois-je réserver ?</span>
+          <span class="t" data-l="en">How far in advance should I book?</span>
+          <span class="t" data-l="ar">كم من الوقت مسبقًا يجب الحجز؟</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-a">
+          <span class="tb on" data-l="fr">Vous pouvez réserver à la dernière minute. Pour garantir la disponibilité — surtout pour les vols tôt le matin (4h–7h) — nous recommandons de réserver au moins 2h à l'avance.</span>
+          <span class="tb" data-l="en">You can book last-minute, but for guaranteed availability — especially for early morning flights (4am–7am) — we recommend booking at least 2 hours ahead. Planning ahead ensures the best service.</span>
+          <span class="tb" data-l="ar">يمكن الحجز في آخر لحظة، لكن لضمان التوفر — خاصةً للرحلات الصباحية المبكرة (4–7 صباحًا) — ننصح بالحجز قبل ساعتين على الأقل. الحجز المسبق يضمن أفضل خدمة.</span>
+        </div>
+      </div>
+
+      <!-- Q4 ARABE -->
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span class="t on" data-l="fr">Parlez-vous arabe ?</span>
+          <span class="t" data-l="en">Do you speak languages other than French?</span>
+          <span class="t" data-l="ar">هل تتحدثون العربية؟</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-a">
+          <span class="tb on" data-l="fr">Oui, notre service est disponible en français, anglais et arabe. Vous pouvez réserver, poser vos questions et communiquer dans la langue de votre choix — par téléphone ou WhatsApp.</span>
+          <span class="tb" data-l="en">Yes, we speak English, French and Arabic. You can book, ask questions and communicate in your preferred language — by phone or WhatsApp. We want you to feel comfortable from the first contact.</span>
+          <span class="tb" data-l="ar">نعم، نتحدث العربية بطلاقة إضافةً إلى الفرنسية والإنجليزية. يمكنك الحجز والتواصل والاستفسار بالعربية عبر الهاتف أو واتساب. نريدك أن تشعر بالراحة من أول لحظة تواصل.</span>
+        </div>
+      </div>
+
+      <!-- Q5 VAN FAMILLE -->
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span class="t on" data-l="fr">Avez-vous des vans pour les familles et grands groupes ?</span>
+          <span class="t" data-l="en">Do you have vans for families and large groups?</span>
+          <span class="t" data-l="ar">هل لديكم فانات للعائلات والمجموعات الكبيرة؟</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-a">
+          <span class="tb on" data-l="fr">Oui, notre flotte inclut des vans spacieux pour les familles et groupes avec beaucoup de bagages. Sièges enfants disponibles sans supplément sur demande. Précisez le nombre de passagers à la réservation.</span>
+          <span class="tb" data-l="en">Yes, we have spacious vans for families and groups with lots of luggage. Child seats are available at no extra charge, upon request. Just let us know the number of passengers when you book.</span>
+          <span class="tb" data-l="ar">نعم، أسطولنا يشمل فانات واسعة للعائلات والمجموعات ذات الأمتعة الكثيرة. مقاعد الأطفال متاحة بدون رسوم إضافية عند الطلب. فقط أخبرنا بعدد الركاب عند الحجز.</span>
+        </div>
+      </div>
+
+      <!-- Q6 FACTURE -->
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span class="t on" data-l="fr">Fournissez-vous des factures pour les voyageurs d'affaires ?</span>
+          <span class="t" data-l="en">Can I get an invoice for my expense report?</span>
+          <span class="t" data-l="ar">هل تقدمون فواتير لرجال الأعمال؟</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-a">
+          <span class="tb on" data-l="fr">Oui, nous fournissons des factures complètes pour vos notes de frais professionnelles. Idéal pour les voyageurs d'affaires et les entreprises qui ont besoin de justificatifs. Contactez-nous au <bdi style="direction:ltr;unicode-bidi:isolate;white-space:nowrap">07 45 62 40 32</bdi>.</span>
+          <span class="tb" data-l="en">Yes, we provide full invoices for business expense reports. Ideal for corporate travelers and companies requiring proper documentation. Contact us at <bdi style="direction:ltr;unicode-bidi:isolate;white-space:nowrap">07 45 62 40 32</bdi> or by WhatsApp.</span>
+          <span class="tb" data-l="ar">نعم، نقدم فواتير تجارية كاملة لتقارير المصروفات المهنية. مثالي لرجال الأعمال والشركات التي تحتاج إلى وثائق رسمية. اتصل بنا على <bdi style="direction:ltr;unicode-bidi:isolate;white-space:nowrap">07 45 62 40 32</bdi> أو عبر واتساب.</span>
+        </div>
+      </div>
+
+      <!-- Q7 VTC VS TAXI -->
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span class="t on" data-l="fr">Quelle est la différence entre un VTC et un taxi ?</span>
+          <span class="t" data-l="en">What's the difference between a VTC and a regular taxi?</span>
+          <span class="t" data-l="ar">ما الفرق بين VTC والتاكسي العادي؟</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-a">
+          <span class="tb on" data-l="fr">Un VTC (Véhicule de Tourisme avec Chauffeur) propose un tarif fixe annoncé avant la course, contrairement au taxi dont le prix dépend du compteur et peut varier selon le trafic. Avec nous, vous connaissez le prix exact avant de monter.</span>
+          <span class="tb" data-l="en">A VTC (private hire vehicle) offers a fixed fare agreed before the ride, unlike a taxi where the price depends on the meter and can vary with traffic. With us, you know the exact price before you get in — no nasty surprises.</span>
+          <span class="tb" data-l="ar">VTC (سيارة سياحية مع سائق) يقدم سعرًا ثابتًا يُحدد قبل الرحلة، على عكس التاكسي الذي يعتمد على العداد ويتغير حسب الزحام. معنا، تعرف السعر الدقيق قبل الصعود — بدون أي مفاجآت غير سارة.</span>
+        </div>
+      </div>
+
+      <!-- Q8 DISNEYLAND -->
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span class="t on" data-l="fr">Assurez-vous les transferts vers Disneyland Paris ?</span>
+          <span class="t" data-l="en">Do you cover Disneyland Paris transfers?</span>
+          <span class="t" data-l="ar">هل تؤمنون التنقل من وإلى ديزني لاند باريس؟</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-a">
+          <span class="tb on" data-l="fr">Oui, nous assurons les transferts depuis CDG, Orly ou tout Paris vers Disneyland Paris (Marne-la-Vallée). Vans et sièges enfants disponibles. À partir de 50€ selon la zone de départ.</span>
+          <span class="tb" data-l="en">Yes, we cover transfers from CDG, Orly or anywhere in Paris to Disneyland Paris (Marne-la-Vallée). Vans and child seats available for families. From €50 depending on pickup location.</span>
+          <span class="tb" data-l="ar">نعم، نغطي التنقل من CDG أو أورلي أو أي مكان في باريس إلى ديزني لاند باريس. فانات ومقاعد أطفال متاحة للعائلات. ابتداءً من 50€ حسب موقع الانطلاق.</span>
+        </div>
+      </div>
+
+      <!-- Q9 ANNULATION -->
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span class="t on" data-l="fr">Puis-je annuler ma réservation ?</span>
+          <span class="t" data-l="en">Can I cancel my booking?</span>
+          <span class="t" data-l="ar">هل يمكنني إلغاء الحجز؟</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-a">
+          <span class="tb on" data-l="fr">Oui, l'annulation est possible. Contactez-nous dès que possible par téléphone ou WhatsApp au <bdi style="direction:ltr;unicode-bidi:isolate;white-space:nowrap">07 45 62 40 32</bdi>. Plus l'annulation est anticipée, mieux c'est pour tout le monde.</span>
+          <span class="tb" data-l="en">Yes, cancellations are accepted. Contact us as soon as possible by phone or WhatsApp at <bdi style="direction:ltr;unicode-bidi:isolate;white-space:nowrap">07 45 62 40 32</bdi>. The earlier the better — we'll do our best to accommodate any changes.</span>
+          <span class="tb" data-l="ar">نعم، الإلغاء مقبول. تواصل معنا في أقرب وقت ممكن بالهاتف أو واتساب على <bdi style="direction:ltr;unicode-bidi:isolate;white-space:nowrap">07 45 62 40 32</bdi>. كلما أبكرت في الإلغاء كان أفضل — سنبذل قصارى جهدنا لمراعاة أي تغيير.</span>
+        </div>
+      </div>
+
+      <!-- Q10 BAGAGES -->
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span class="t on" data-l="fr">Acceptez-vous les bagages volumineux ?</span>
+          <span class="t" data-l="en">Can you handle large or heavy luggage?</span>
+          <span class="t" data-l="ar">هل تقبلون الأمتعة الكبيرة والثقيلة؟</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-a">
+          <span class="tb on" data-l="fr">Oui, nos véhicules sont adaptés pour tous types de bagages, y compris les valises volumineuses. Pour les groupes avec beaucoup de bagages, précisez-le à la réservation et nous prévoirons un van adapté.</span>
+          <span class="tb" data-l="en">Yes, our vehicles can handle all luggage types including oversized bags. For groups with lots of heavy luggage, just let us know when booking and we'll arrange a suitable van with plenty of boot space.</span>
+          <span class="tb" data-l="ar">نعم، سياراتنا مجهزة لجميع أنواع الأمتعة بما فيها الحقائب الكبيرة. للمجموعات ذات الأمتعة الكثيرة والثقيلة، أخبرنا عند الحجز وسنرتب فانًا مناسبًا بمساحة تخزين كافية.</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="cta-section">
+  <div class="section-label">
+    <span class="t on" data-l="fr">Réservation</span>
+    <span class="t" data-l="en">Book now</span>
+    <span class="t" data-l="ar">احجز الآن</span>
+  </div>
+  <h2>
+    <span class="tb on" data-l="fr">Prêt à partir ?<br>Appelez maintenant.</span>
+    <span class="tb" data-l="en">Ready to travel?<br>We're one call away.</span>
+    <span class="tb" data-l="ar">مستعد للسفر؟<br>نحن على بُعد مكالمة.</span>
+  </h2>
+  <p class="cta-sub">
+    <span class="tb on" data-l="fr">Disponible 24h/24 — Réponse immédiate — Service en français, anglais et arabe</span>
+    <span class="tb" data-l="en">Available 24/7 — Immediate response — Service in English, French and Arabic</span>
+    <span class="tb" data-l="ar">متاح 24/7 — رد فوري — خدمة بالعربية والفرنسية والإنجليزية</span>
+  </p>
+  <p class="cta-price">
+    <span class="t on" data-l="fr">À partir de 35€ · Tarif fixe · Sans compteur</span>
+    <span class="t" data-l="en">From €35 · Fixed fare · No meter</span>
+    <span class="t" data-l="ar">ابتداءً من 35€ · سعر ثابت · بدون عداد</span>
+  </p>
+  <a href="tel:+33745624032" class="cta-phone"><span style="direction:ltr;unicode-bidi:embed"><bdi style="direction:ltr;unicode-bidi:isolate;white-space:nowrap">07 45 62 40 32</bdi></span></a>
+  <div class="cta-buttons">
+    <a href="tel:+33745624032" class="btn-primary">
+      <span>📞</span>
+      <span class="t on" data-l="fr">Appel direct</span>
+      <span class="t" data-l="en">Call directly</span>
+      <span class="t" data-l="ar">اتصال مباشر</span>
+    </a>
+    <a href="https://wa.me/33745624032?text=Bonjour%2C%20je%20souhaite%20r%C3%A9server%20un%20VTC." class="btn-whatsapp wa-link" target="_blank">
+      <span>💬</span>
+      <span class="t on" data-l="fr">WhatsApp</span>
+      <span class="t" data-l="en">WhatsApp</span>
+      <span class="t" data-l="ar">واتساب بالعربية</span>
+    </a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 VTC Paris Transfert — Chauffeur privé Île-de-France — Airport transfer Paris CDG Orly — نقل مطار باريس</p>
+  <div class="footer-links">
+    <a href="tel:+33745624032"><span style="direction:ltr;unicode-bidi:embed"><bdi style="direction:ltr;unicode-bidi:isolate;white-space:nowrap">07 45 62 40 32</bdi></span></a>
+    <a href="https://wa.me/33745624032" target="_blank">WhatsApp</a>
+  </div>
+</footer>
+
+<!-- FLOATING -->
+<div class="floating-call">
+  <a href="https://wa.me/33745624032?text=Bonjour%2C%20je%20souhaite%20r%C3%A9server%20un%20VTC." class="float-btn float-wa wa-link" target="_blank">
+    <span>💬</span><span class="lbl">WhatsApp</span>
+  </a>
+  <a href="tel:+33745624032" class="float-btn float-call">
+    <span>📞</span><span class="lbl" style="white-space:nowrap"><bdi style="direction:ltr;unicode-bidi:isolate;white-space:nowrap">07 45 62 40 32</bdi></span>
+  </a>
 </div>
 
 <script>
-  document.getElementById("caviarForm").addEventListener("submit", function(e) {
-    e.preventDefault();
+const WA = {
+  fr: 'Bonjour%2C%20je%20souhaite%20r%C3%A9server%20un%20VTC%20Paris%20a%C3%A9roport.',
+  en: 'Hello%2C%20I%20would%20like%20to%20book%20a%20Paris%20airport%20transfer.',
+  ar: '%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D8%8C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%AD%D8%AC%D8%B2%20%D8%B3%D9%8A%D8%A7%D8%B1%D8%A9%20%D8%AE%D8%A7%D8%B5%D8%A9%20%D9%85%D8%B7%D8%A7%D8%B1%20%D8%A8%D8%A7%D8%B1%D9%8A%D8%B3.'
+};
 
-    const budget = document.getElementById("budget").value;
-    const commitment = document.getElementById("commitment").value;
+function toggleFaq(el) {
+  const item = el.parentElement;
+  const wasOpen = item.classList.contains('open');
+  document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+  if (!wasOpen) item.classList.add('open');
+}
 
-    const skool = "https://www.skool.com/avatar-institut-6074/about";
-    const calendly = "https://calendly.com/flowfun/kamal?month=2026-02";
-
-    if ((budget === "high" || budget === "premium") && commitment === "yes") {
-      window.location.href = calendly;
-    } else {
-      window.location.href = skool;
-    }
-  });
+function L(lang, btn) {
+  document.body.dir = lang === 'ar' ? 'rtl' : 'ltr';
+  document.documentElement.lang = lang;
+  document.querySelectorAll('.t').forEach(el => el.classList.toggle('on', el.getAttribute('data-l') === lang));
+  document.querySelectorAll('.tb').forEach(el => el.classList.toggle('on', el.getAttribute('data-l') === lang));
+  document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.wa-link').forEach(a => a.href = 'https://wa.me/33745624032?text=' + WA[lang]);
+}
 </script>
 
 </body>
