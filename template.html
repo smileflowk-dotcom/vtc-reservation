@@ -208,6 +208,7 @@ footer p{font-size:.78rem;color:#555548}
     </div>
   </div>
   <p>{DESCRIPTION}</p>
+  {ENRICHI}
 </section>
 
 <!-- AVANTAGES -->
@@ -245,42 +246,15 @@ footer p{font-size:.78rem;color:#555548}
   <div class="section-label">Questions fréquentes</div>
   <h2>Tout savoir sur votre trajet<br>{DEPART} → {ARRIVEE}</h2>
   <div class="faq-list">
-    <div class="faq-item">
-      <div class="faq-q" onclick="toggleFaq(this)">
-        Quel est le tarif pour un VTC {DEPART} → {ARRIVEE} ?
-        <span class="faq-icon">+</span>
-      </div>
-      <div class="faq-a">Le tarif fixe pour un transfert {DEPART} vers {ARRIVEE} est à partir de {PRIX}€, annoncé avant la course sans compteur. Pas de surprise à l'arrivée. Appelez le 07 45 62 40 32 pour confirmer votre devis en 30 secondes.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q" onclick="toggleFaq(this)">
-        Combien de temps dure le trajet {DEPART} → {ARRIVEE} ?
-        <span class="faq-icon">+</span>
-      </div>
-      <div class="faq-a">La durée estimée du trajet {DEPART} vers {ARRIVEE} est d'environ {DUREE} minutes en conditions normales de circulation. Votre chauffeur optimise l'itinéraire en temps réel pour vous garantir la meilleure ponctualité.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q" onclick="toggleFaq(this)">
-        Comment réserver un VTC {DEPART} → {ARRIVEE} ?
-        <span class="faq-icon">+</span>
-      </div>
-      <div class="faq-a">Appelez le 07 45 62 40 32 ou envoyez un message WhatsApp. Votre tarif est confirmé en 30 secondes. Service disponible 24h/24, 7j/7. Réservation possible en français, anglais et arabe. Aucune application nécessaire.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q" onclick="toggleFaq(this)">
-        Le service est-il disponible la nuit et tôt le matin ?
-        <span class="faq-icon">+</span>
-      </div>
-      <div class="faq-a">Oui, notre service VTC {DEPART} → {ARRIVEE} est disponible 24h/24 sans exception. Vol à 4h du matin, retour à minuit — votre chauffeur sera toujours là. Réservez la veille pour garantir la disponibilité.</div>
-    </div>
+    {FAQ_ITEMS}
   </div>
 </section>
 
 <!-- CTA -->
 <section class="cta-section">
   <div class="section-label">Réservation</div>
-  <h2>Réservez votre VTC<br>{DEPART} → {ARRIVEE}</h2>
-  <p style="color:var(--gray);margin-bottom:8px">Disponible 24h/24 · Tarif fixe {PRIX}€ · Sans compteur</p>
+  <h2>{CTA_TITRE}</h2>
+  <p style="color:var(--gray);margin-bottom:8px">{CTA_SOUS}</p>
   <a href="tel:+33745624032" class="cta-phone">07 45 62 40 32</a>
   <div class="cta-btns">
     <a href="tel:+33745624032" class="btn-primary">📞 Appel direct</a>
