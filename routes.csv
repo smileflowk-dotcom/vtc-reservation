@@ -1,0 +1,154 @@
+depart,arrivee,prix,duree,type_client,demande
+CDG,Paris Centre,45,45,Tous,fort
+CDG,Paris 1er,42,45,Touriste,fort
+CDG,Paris 2e,42,45,Business,moyen
+CDG,Paris 3e,42,45,Touriste,moyen
+CDG,Paris 4e,43,45,Touriste,fort
+CDG,Paris 5e,44,48,Touriste,moyen
+CDG,Paris 6e,45,50,Luxe,moyen
+CDG,Paris 7e,48,52,Touriste,fort
+CDG,Paris 8e,50,50,Business,fort
+CDG,Paris 9e,44,48,Business,moyen
+CDG,Paris 10e,40,42,Business,fort
+CDG,Paris 11e,44,48,Touriste,moyen
+CDG,Paris 12e,45,50,Business,moyen
+CDG,Paris 13e,46,52,Business,moyen
+CDG,Paris 14e,47,54,Business,moyen
+CDG,Paris 15e,48,55,Business,moyen
+CDG,Paris 16e,55,55,Luxe,fort
+CDG,Paris 17e,46,50,Business,moyen
+CDG,Paris 18e,38,38,Touriste,moyen
+CDG,Paris 19e,36,35,Business,faible
+CDG,Paris 20e,40,42,Business,faible
+CDG,Disneyland Paris,60,40,Famille,fort
+CDG,Versailles,75,65,Touriste,fort
+CDG,La Défense,55,50,Business,fort
+CDG,Neuilly-sur-Seine,50,45,Luxe,fort
+CDG,Boulogne-Billancourt,55,55,Business,moyen
+CDG,Levallois-Perret,48,48,Business,moyen
+CDG,Courbevoie,50,48,Business,moyen
+CDG,Nanterre,45,45,Business,moyen
+CDG,Saint-Denis,30,25,Business,moyen
+CDG,Vincennes,45,50,Business,faible
+CDG,Montreuil,42,48,Business,faible
+CDG,Créteil,50,55,Business,faible
+CDG,Issy-les-Moulineaux,52,55,Business,moyen
+CDG,Gare du Nord,40,35,Business,fort
+CDG,Gare de Lyon,50,50,Business,moyen
+CDG,Gare Montparnasse,55,55,Business,moyen
+CDG,Gare de l'Est,42,40,Business,moyen
+CDG,Gare Saint-Lazare,46,48,Business,moyen
+CDG,Ritz Paris,65,50,Luxe,fort
+CDG,Four Seasons George V,65,50,Luxe,fort
+CDG,Peninsula Paris,65,52,Luxe,moyen
+CDG,Shangri-La Paris,65,55,Luxe,moyen
+CDG,Plaza Athénée,65,50,Luxe,fort
+CDG,Mandarin Oriental Paris,65,50,Luxe,moyen
+CDG,Hotel Le Bristol,65,50,Luxe,moyen
+CDG,Le Meurice,65,50,Luxe,moyen
+CDG,Champs-Élysées,50,50,Touriste,fort
+CDG,Tour Eiffel,50,52,Touriste,fort
+CDG,Louvre,45,47,Touriste,fort
+CDG,Opéra,44,46,Touriste,moyen
+CDG,Marais,43,45,Touriste,moyen
+CDG,Saint-Germain-des-Prés,47,50,Touriste,moyen
+CDG,Parc Astérix,45,25,Famille,moyen
+CDG,Fontainebleau,90,75,Touriste,moyen
+CDG,Chantilly,50,30,Touriste,moyen
+CDG,Terminal 1,35,40,Tous,fort
+CDG,Terminal 2E,35,40,Tous,fort
+CDG,Terminal 2F,35,40,Tous,fort
+CDG,Terminal 3,35,38,Tous,moyen
+Orly,Paris Centre,38,35,Tous,fort
+Orly,Paris 1er,36,33,Touriste,fort
+Orly,Paris 4e,37,34,Touriste,moyen
+Orly,Paris 5e,36,32,Touriste,moyen
+Orly,Paris 6e,37,33,Touriste,moyen
+Orly,Paris 7e,36,32,Touriste,fort
+Orly,Paris 8e,42,40,Business,fort
+Orly,Paris 13e,30,25,Business,moyen
+Orly,Paris 14e,32,28,Business,moyen
+Orly,Paris 15e,33,30,Business,moyen
+Orly,Paris 16e,42,40,Luxe,fort
+Orly,Disneyland Paris,65,55,Famille,fort
+Orly,Versailles,55,45,Touriste,fort
+Orly,La Défense,50,40,Business,fort
+Orly,Gare de Lyon,35,30,Business,fort
+Orly,Gare Montparnasse,35,25,Business,fort
+Orly,Gare du Nord,45,40,Business,moyen
+Orly,Neuilly-sur-Seine,45,40,Luxe,moyen
+Orly,Ritz Paris,55,40,Luxe,moyen
+Orly,Four Seasons George V,55,40,Luxe,moyen
+Orly,Plaza Athénée,55,40,Luxe,moyen
+Orly,Tour Eiffel,36,32,Touriste,fort
+Orly,Champs-Élysées,40,38,Touriste,fort
+Orly,Louvre,38,35,Touriste,moyen
+Orly,Terminal 1,30,30,Tous,moyen
+Orly,Terminal 2,30,30,Tous,moyen
+Beauvais,Paris Centre,95,90,Touriste,fort
+Beauvais,Paris 8e,98,95,Touriste,moyen
+Beauvais,Disneyland Paris,110,100,Famille,moyen
+Beauvais,Gare du Nord,90,85,Touriste,moyen
+Paris Centre,CDG,45,45,Tous,fort
+Paris 8e,CDG,50,50,Business,fort
+Paris 16e,CDG,55,55,Luxe,fort
+Paris Centre,Orly,38,35,Tous,fort
+Paris 8e,Orly,42,40,Business,fort
+Paris 16e,Orly,42,40,Luxe,fort
+Disneyland Paris,CDG,60,40,Famille,fort
+Disneyland Paris,Orly,65,55,Famille,fort
+Disneyland Paris,Beauvais,110,100,Famille,moyen
+Disneyland Paris,Paris Centre,55,45,Famille,fort
+Disneyland Paris,Paris 8e,58,48,Famille,fort
+Disneyland Paris,Paris 16e,60,50,Famille,fort
+Disneyland Paris,Versailles,70,60,Famille,moyen
+Disneyland Paris,Gare du Nord,65,55,Famille,moyen
+Disneyland Paris,Gare de Lyon,60,50,Famille,moyen
+Disneyland Disney Hotel,CDG,60,40,Famille,fort
+Disneyland Newport Bay,CDG,60,40,Famille,moyen
+Disneyland New York,CDG,60,40,Famille,moyen
+Disneyland Cheyenne,CDG,60,40,Famille,moyen
+Disneyland Sequoia Lodge,CDG,60,40,Famille,moyen
+Versailles,CDG,75,65,Touriste,fort
+Versailles,Orly,55,45,Touriste,moyen
+Versailles,Paris Centre,45,40,Touriste,fort
+Versailles,Disneyland Paris,70,60,Touriste,moyen
+Paris,Versailles,45,40,Touriste,fort
+Paris,Fontainebleau,85,70,Touriste,moyen
+Paris,Chantilly,75,60,Touriste,moyen
+Paris,Giverny,130,90,Touriste,moyen
+Paris,Chartres,120,90,Touriste,moyen
+Paris,Reims,180,140,Touriste,faible
+Paris,Épernay,170,130,Touriste,faible
+Paris,Vaux-le-Vicomte,75,60,Touriste,moyen
+Paris,Senlis,70,55,Touriste,faible
+Paris,Auvers-sur-Oise,65,55,Touriste,faible
+Gare du Nord,CDG,40,35,Business,fort
+Gare du Nord,Orly,45,40,Business,moyen
+Gare du Nord,Disneyland Paris,70,60,Famille,moyen
+Gare de Lyon,CDG,50,50,Business,moyen
+Gare de Lyon,Orly,35,30,Business,fort
+Gare de Lyon,Disneyland Paris,65,55,Famille,moyen
+Gare Montparnasse,CDG,55,55,Business,moyen
+Gare Montparnasse,Orly,35,25,Business,fort
+Gare Montparnasse,Versailles,35,30,Touriste,moyen
+Gare de l'Est,CDG,42,40,Business,moyen
+Gare Saint-Lazare,CDG,46,48,Business,moyen
+CDG,Orly,65,60,Tous,fort
+Orly,CDG,65,60,Tous,fort
+CDG,Beauvais,90,80,Touriste,moyen
+Orly,Beauvais,110,100,Touriste,faible
+VTC Paris,CDG nuit,55,50,Tous,fort
+VTC Paris,Orly nuit,45,40,Tous,fort
+VTC Paris,CDG 4h matin,55,50,Tous,fort
+VTC Paris,CDG 5h matin,55,50,Tous,fort
+VTC Paris,CDG 6h matin,50,45,Tous,fort
+CDG,Paris mariage,80,50,Événement,moyen
+Paris,Salon Villepinte,45,40,Business,moyen
+Paris,Roland Garros,35,25,Touriste,moyen
+Paris,Stade de France,35,30,Événement,moyen
+Paris,Paris Fashion Week,50,35,Luxe,moyen
+CDG,Lyon,350,240,Business,faible
+CDG,Lille,180,120,Business,moyen
+CDG,Bruxelles,280,180,Business,faible
+CDG,Genève,550,300,Business,faible
