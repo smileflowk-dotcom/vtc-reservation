@@ -52,7 +52,7 @@ function generateIntro(depart, arrivee, prix, duree, typeClient) {
   };
   const defaultIntro = `Vous recherchez un VTC fiable pour votre trajet ${depart} → ${arrivee} ?`;
   const base = intros[depart] || defaultIntro;
-  return `${base} Notre service VTC propose un tarif fixe de ${prix}€ pour ce trajet d'environ ${duree} minutes. Chauffeur professionnel disponible 24h/24, véhicule confortable, aide bagages incluse. Réservez en 2 minutes par téléphone ou WhatsApp.`;
+  return `${base} Notre service VTC propose des tarifs à partir de ${prix}€ pour ce trajet d'environ ${duree} minutes. Appelez le 07 45 62 40 32 ou envoyez un WhatsApp pour obtenir votre devis en 30 secondes. Chauffeur professionnel disponible 24h/24, véhicule confortable, aide bagages incluse.`;
 }
 
 // ── Générer la description longue ────────────────────────────
@@ -66,7 +66,7 @@ function generateDescription(depart, arrivee, prix, duree, typeClient) {
     'Événement': 'Service disponible pour tous vos événements — mariages, séminaires, sorties.',
   };
   const clientStr = clientDesc[typeClient] || clientDesc['Tous'];
-  return `Le trajet VTC ${depart} vers ${arrivee} est l'une de nos courses les plus fréquentes en Île-de-France. Avec un tarif fixe de ${prix}€ et une durée estimée de ${duree} minutes, ce transfert est idéal pour éviter le stress des transports en commun. ${clientStr} Notre chauffeur suit votre vol en temps réel pour les départs depuis les aéroports et ajuste l'heure de prise en charge en cas de retard — attente jusqu'à 60 minutes incluse sans supplément.`;
+  return `Le trajet VTC ${depart} vers ${arrivee} est l'une de nos courses les plus fréquentes en Île-de-France. La durée estimée est d'environ ${duree} minutes. Appelez le 07 45 62 40 32 ou envoyez un message WhatsApp pour obtenir votre tarif personnalisé en 30 secondes. ${clientStr} Notre chauffeur suit votre vol en temps réel pour les départs depuis les aéroports et ajuste l'heure de prise en charge en cas de retard — attente jusqu'à 60 minutes incluse sans supplément.`;
 }
 
 // ── Générer les liens relatifs ────────────────────────────────
