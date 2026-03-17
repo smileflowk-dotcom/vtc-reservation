@@ -1,93 +1,105 @@
-const fs = require('fs');
+#!/usr/bin/env node
+// ─────────────────────────────────────────────────────────────
+//  generate-sitemap.js — Générateur de sitemap.xml automatique
+//  Usage : node generate-sitemap.js
+// ─────────────────────────────────────────────────────────────
+
+const fs   = require('fs');
 const path = require('path');
 
-const BASE_URL = 'https://smileflowk-dotcom.github.io/vtc-reservation';
+const BASE_URL    = 'https://smileflowk-dotcom.github.io/vtc-reservation';
+const ROOT_DIR    = __dirname;
+const OUTPUT_FILE = path.join(ROOT_DIR, 'sitemap.xml');
+const TODAY       = new Date().toISOString().split('T')[0];
 
-const ROOT_DIR = __dirname;
+// Dossiers et fichiers à ignorer
+const IGNORE_DIRS  = new Set(['node_modules', '.git', '.github', '.vscode']);
+const IGNORE_FILES = new Set([
+  'sitemap.xml',
+  'sitemap-pages.xml',
+  'robots.txt',
+  'generate-sitemap.js',
+  'generate-pages.js',
+  'template.html',
+  'index-trajets.html',
+]);
 
-// récupérer tous les fichiers HTML
-function getAllHtmlFiles(dir) {
-  let results = [];
-  const list = fs.readdirSync(dir);
+// Priorités par type de page
+function getPriority(urlPath) {
+  if (urlPath === '/')                          return '1.0';
+  if (urlPath.match(/\/(vtc-cdg|vtc-orly|vtc-disneyland|vtc-gares|transfert-aeroport)\.html$/)) return '0.9';
+  if (urlPath.match(/\/(chauffeur-prive|vtc-famille|vtc-paris-aeroport|transfert-disneyland|vtc-cdg-prix)\.html$/)) return '0.8';
+  if (urlPath.includes('/pages/'))              return '0.7';
+  return '0.5';
+}
 
-  list.forEach(file => {
-    const filePath = path.join(dir, file);
-    const stat = fs.statSync(filePath);
+function getChangefreq(urlPath) {
+  if (urlPath === '/')                          return 'weekly';
+  if (!urlPath.includes('/pages/'))             return 'weekly';
+  return 'monthly';
+}
 
-    if (stat && stat.isDirectory()) {
-      results = results.concat(getAllHtmlFiles(filePath));
-    } else if (file.endsWith('.html')) {
+// Parcourir récursivement les dossiers
+function findHtmlFiles(dir, baseDir) {
+  if (!baseDir) baseDir = dir;
+  const results = [];
+  const entries = fs.readdirSync(dir, { withFileTypes: true });
 
-      // 🚫 EXCLUSIONS SEO
-      if (
-        file.includes('template') ||
-        file.includes('google') ||
-        file.includes('test') ||
-        file.includes('index-trajets') ||
-        file.includes('merci') ||
-        file.includes('confirmation')
-      ) {
-        return;
+  for (const entry of entries) {
+    if (entry.isDirectory()) {
+      if (!IGNORE_DIRS.has(entry.name)) {
+        results.push(...findHtmlFiles(path.join(dir, entry.name), baseDir));
       }
-
-      results.push(filePath);
+    } else if (entry.isFile() && entry.name.endsWith('.html')) {
+      if (!IGNORE_FILES.has(entry.name)) {
+        results.push(path.join(dir, entry.name));
+      }
     }
-  });
+  }
 
   return results;
 }
 
-// 🎯 PRIORITY SEO optimisée
-function getPriority(url) {
-  if (url === 'index.html') return '1.0';
-
-  if (
-    url.includes('transfert-aeroport') ||
-    url.includes('chauffeur-prive') ||
-    url.includes('vtc-paris-aeroport-24h')
-  ) {
-    return '0.9';
-  }
-
-  if (
-    url === 'vtc-cdg.html' ||
-    url === 'vtc-orly.html' ||
-    url === 'vtc-cdg-prix.html'
-  ) {
-    return '0.8';
-  }
-
-  if (url.includes('/pages/')) {
-    return '0.5';
-  }
-
-  return '0.6';
+// Convertir un chemin fichier en URL publique
+function fileToUrl(filePath) {
+  const relative = path.relative(ROOT_DIR, filePath).replace(/\\/g, '/');
+  if (relative === 'index.html') return '/';
+  return '/' + relative;
 }
 
-const files = getAllHtmlFiles(ROOT_DIR);
+// ── MAIN ────────────────────────────────────────────────────
 
-let xml = `<?xml version="1.0" encoding="UTF-8"?>\n`;
-xml += `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n\n`;
+console.log('🚀 Génération du sitemap.xml...\n');
 
-files.forEach(filePath => {
-  let relativePath = path.relative(ROOT_DIR, filePath).replace(/\\/g, '/');
+const htmlFiles = findHtmlFiles(ROOT_DIR);
+const urls = htmlFiles
+  .map(f => fileToUrl(f))
+  .sort((a, b) => {
+    if (a === '/') return -1;
+    if (b === '/') return 1;
+    if (!a.includes('/pages/') && b.includes('/pages/')) return -1;
+    if (a.includes('/pages/') && !b.includes('/pages/')) return 1;
+    return a.localeCompare(b);
+  });
 
-  let url = relativePath === 'index.html'
-    ? `${BASE_URL}/`
-    : `${BASE_URL}/${relativePath}`;
+const urlEntries = urls.map(urlPath => `
+  <url>
+    <loc>${BASE_URL}${urlPath}</loc>
+    <lastmod>${TODAY}</lastmod>
+    <changefreq>${getChangefreq(urlPath)}</changefreq>
+    <priority>${getPriority(urlPath)}</priority>
+  </url>`).join('');
 
-  const stats = fs.statSync(filePath);
-  const lastmod = stats.mtime.toISOString();
+const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${urlEntries}
+</urlset>`;
 
-  xml += `  <url>\n`;
-  xml += `    <loc>${url}</loc>\n`;
-  xml += `    <lastmod>${lastmod}</lastmod>\n`;
-  xml += `    <priority>${getPriority(relativePath)}</priority>\n`;
-  xml += `  </url>\n`;
-});
+fs.writeFileSync(OUTPUT_FILE, sitemap, 'utf8');
 
-xml += `</urlset>`;
-
-fs.writeFileSync(path.join(ROOT_DIR, 'sitemap.xml'), xml);
-
-console.log('✅ Sitemap propre + filtré généré !');
+console.log('✅ sitemap.xml généré avec ' + urls.length + ' URLs');
+console.log('📁 Fichier : ' + OUTPUT_FILE);
+console.log('\n📋 Aperçu des premières URLs :');
+urls.slice(0, 10).forEach(u => console.log('   ' + BASE_URL + u));
+if (urls.length > 10) console.log('   ... et ' + (urls.length - 10) + ' autres');
+console.log('\n✨ Prêt à soumettre dans Google Search Console !');
