@@ -17,11 +17,15 @@ function getAllHtmlFiles(dir) {
     if (stat && stat.isDirectory()) {
       results = results.concat(getAllHtmlFiles(filePath));
     } else if (file.endsWith('.html')) {
-      // exclure fichiers inutiles
+
+      // 🚫 EXCLUSIONS SEO
       if (
         file.includes('template') ||
         file.includes('google') ||
-        file.includes('test')
+        file.includes('test') ||
+        file.includes('index-trajets') ||
+        file.includes('merci') ||
+        file.includes('confirmation')
       ) {
         return;
       }
@@ -35,10 +39,8 @@ function getAllHtmlFiles(dir) {
 
 // 🎯 PRIORITY SEO optimisée
 function getPriority(url) {
-  // homepage
   if (url === 'index.html') return '1.0';
 
-  // pages principales (gros SEO)
   if (
     url.includes('transfert-aeroport') ||
     url.includes('chauffeur-prive') ||
@@ -47,7 +49,6 @@ function getPriority(url) {
     return '0.9';
   }
 
-  // pages importantes (CDG / Orly)
   if (
     url === 'vtc-cdg.html' ||
     url === 'vtc-orly.html' ||
@@ -56,14 +57,10 @@ function getPriority(url) {
     return '0.8';
   }
 
-  // pages locales (gros volume SEO)
-  if (
-    url.includes('/pages/')
-  ) {
+  if (url.includes('/pages/')) {
     return '0.5';
   }
 
-  // reste
   return '0.6';
 }
 
@@ -79,7 +76,6 @@ files.forEach(filePath => {
     ? `${BASE_URL}/`
     : `${BASE_URL}/${relativePath}`;
 
-  // vraie date fichier
   const stats = fs.statSync(filePath);
   const lastmod = stats.mtime.toISOString();
 
@@ -94,4 +90,4 @@ xml += `</urlset>`;
 
 fs.writeFileSync(path.join(ROOT_DIR, 'sitemap.xml'), xml);
 
-console.log('✅ Sitemap SEO optimisé généré !');
+console.log('✅ Sitemap propre + filtré généré !');

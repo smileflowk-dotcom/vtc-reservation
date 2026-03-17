@@ -1,9 +1,4 @@
 User-agent: *
 Allow: /
 
-# Pages internes — exclure de l'indexation
-Disallow: /index-trajets.html
-
-# Sitemaps
 Sitemap: https://smileflowk-dotcom.github.io/vtc-reservation/sitemap.xml
-Sitemap: https://smileflowk-dotcom.github.io/vtc-reservation/sitemap-pages.xml
