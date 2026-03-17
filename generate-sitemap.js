@@ -22,6 +22,7 @@ const IGNORE_FILES = new Set([
   'generate-pages.js',
   'template.html',
   'index-trajets.html',
+  'googlea74594cdc943801f.html',
 ]);
 
 // Priorités par type de page
