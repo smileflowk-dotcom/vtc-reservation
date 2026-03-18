@@ -24,16 +24,20 @@ max-width: 500px;
 margin: auto;
 }
 
+/* 🔥 TITRE MOBILE OPTI */
 h1 {
-font-size: 34px;
+font-size: 30px;
 line-height: 1.1;
 margin-bottom: 10px;
 text-transform: uppercase;
 }
 
+/* 🔥 DISPONIBLE MAINTENANT SUR 1 LIGNE */
 .highlight {
 color: #f0a500;
 font-weight: bold;
+font-size: clamp(20px, 5vw, 26px);
+white-space: nowrap;
 }
 
 .sub {
@@ -42,6 +46,7 @@ font-size: 15px;
 margin-bottom: 20px;
 }
 
+/* 🔥 CTA OR */
 .cta {
 display: block;
 background: linear-gradient(135deg, #d4af37, #f5d76e);
@@ -80,7 +85,7 @@ margin: 10px 0;
 font-size: 16px;
 }
 
-/* 🔥 STICKY OPTIMISÉ (PLUS GRAND MAIS CLEAN) */
+/* 🔥 STICKY OPTIMISÉ */
 .sticky {
 position: fixed;
 bottom: 10px;
@@ -123,7 +128,10 @@ color: white;
 <div class="container">
 
 <!-- HERO -->
-<h1>VTC CDG<br><span class="highlight">DISPONIBLE MAINTENANT</span></h1>
+<h1>
+VTC CDG<br>
+<span class="highlight">DISPONIBLE MAINTENANT</span>
+</h1>
 
 <p class="sub">
 Chauffeur à proximité – départ immédiat<br>
@@ -156,7 +164,7 @@ Aéroport Charles de Gaulle
 </a>
 </div>
 
-<!-- POURQUOI NOUS -->
+<!-- POURQUOI -->
 <div class="block">
 <h2>Pourquoi nous appeler ?</h2>
 
