@@ -8,6 +8,15 @@
 <meta name="description" content="Chauffeur CDG (Charles de Gaulle) disponible immédiatement. Prix annoncé en 10 secondes. Appelez maintenant.">
 <meta name="robots" content="noindex">
 
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18024308239"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-18024308239');
+</script>
+
 <style>
 body {
 margin: 0;
@@ -139,7 +148,7 @@ Paris → CDG • CDG → Paris<br>
 Aéroport Charles de Gaulle
 </p>
 
-<a href="tel:+33745624032" class="cta">
+<a href="tel:+33745624032" class="cta" onclick="return gtag_report_conversion('tel:+33745624032')">
 📞 APPELER MAINTENANT
 </a>
 
@@ -159,7 +168,7 @@ Aéroport Charles de Gaulle
 <li>✈️ Spécialiste CDG</li>
 </ul>
 
-<a href="tel:+33745624032" class="cta">
+<a href="tel:+33745624032" class="cta" onclick="return gtag_report_conversion('tel:+33745624032')">
 📞 Appeler maintenant
 </a>
 </div>
@@ -169,8 +178,8 @@ Aéroport Charles de Gaulle
 <h2>Pourquoi nous appeler ?</h2>
 
 <ul>
-<li>🚫 Pas d’attente comme Uber</li>
-<li>🚗 Chauffeur confirmé à l’appel</li>
+<li>🚫 Pas d'attente comme Uber</li>
+<li>🚗 Chauffeur confirmé à l'appel</li>
 <li>💰 Prix fixe annoncé immédiatement</li>
 </ul>
 
@@ -178,17 +187,17 @@ Aéroport Charles de Gaulle
 <p class="sub">Appelez maintenant → prix immédiat</p>
 <p class="highlight">✔ Tarif fixe • aucun frais caché</p>
 
-<a href="tel:+33745624032" class="cta">
+<a href="tel:+33745624032" class="cta" onclick="return gtag_report_conversion('tel:+33745624032')">
 📞 OBTENIR MON PRIX
 </a>
 </div>
 
 <!-- AVIS -->
 <div class="block">
-<p>⭐⭐⭐⭐⭐ “Rapide, fiable, parfait pour CDG”</p>
-<p>⭐⭐⭐⭐⭐ “Chauffeur ponctuel et pro”</p>
+<p>⭐⭐⭐⭐⭐ "Rapide, fiable, parfait pour CDG"</p>
+<p>⭐⭐⭐⭐⭐ "Chauffeur ponctuel et pro"</p>
 
-<a href="tel:+33745624032" class="cta">
+<a href="tel:+33745624032" class="cta" onclick="return gtag_report_conversion('tel:+33745624032')">
 📞 Réserver maintenant
 </a>
 </div>
@@ -209,9 +218,9 @@ Donné immédiatement par téléphone</p>
 
 <!-- FINAL -->
 <div class="block">
-<h2>Besoin d’un VTC CDG ?</h2>
+<h2>Besoin d'un VTC CDG ?</h2>
 
-<a href="tel:+33745624032" class="cta">
+<a href="tel:+33745624032" class="cta" onclick="return gtag_report_conversion('tel:+33745624032')">
 📞 APPELER MAINTENANT
 </a>
 
@@ -222,9 +231,27 @@ Donné immédiatement par téléphone</p>
 
 <!-- STICKY -->
 <div class="sticky">
-<a href="tel:+33745624032" class="call-btn">📞 Appeler</a>
+<a href="tel:+33745624032" class="call-btn" onclick="return gtag_report_conversion('tel:+33745624032')">📞 Appeler</a>
 <a href="https://wa.me/33745624032" class="whatsapp-btn">💬 WhatsApp</a>
 </div>
+
+<!-- Snippet conversion Google Ads — Annonce Appel Direct -->
+<script>
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+    'send_to': 'AW-18024308239/HCKbCNLulYscEI-81JJD',
+    'value': 1.0,
+    'currency': 'EUR',
+    'event_callback': callback
+  });
+  return false;
+}
+</script>
 
 </body>
 </html>
