@@ -8,13 +8,16 @@
 <meta name="description" content="Chauffeur CDG (Charles de Gaulle) disponible immédiatement. Prix annoncé en 10 secondes. Appelez maintenant.">
 <meta name="robots" content="noindex">
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18024308239"></script>
+<!-- Google Consent Mode v2 : aucun tag chargé avant accord explicite -->
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'AW-18024308239');
+window.dataLayer=window.dataLayer||[];
+function gtag(){dataLayer.push(arguments);}
+window.vtcTrackingConsent=false;
+window.vtcMarketingConsent=false;
+gtag('consent','default',{
+  'analytics_storage':'denied','ad_storage':'denied',
+  'ad_user_data':'denied','ad_personalization':'denied'
+});
 </script>
 
 <style>
@@ -129,15 +132,15 @@ color: white;
 background: #25D366;
 color: white;
 }
+
+.cookie-consent{position:fixed;z-index:2000;bottom:0;left:0;right:0;padding:15px;background:#191919;border-top:1px solid #d4af37;box-shadow:0 -4px 18px #0009;text-align:center}
+.cookie-consent p{max-width:640px;margin:0 auto 12px;font-size:13px;line-height:1.5;color:#eee}
+.cookie-consent button{margin:3px;padding:10px 12px;border:1px solid #aaa;border-radius:7px;background:#242424;color:white;cursor:pointer;min-height:42px}
+.cookie-consent button:first-of-type{background:#d4af37;color:#111;border-color:#d4af37;font-weight:bold}
+.cookie-consent[hidden]{display:none}
+.privacy-choices{margin:24px auto 10px;display:block;border:0;background:none;color:#aaa;text-decoration:underline;font-size:12px;cursor:pointer}
 </style>
-<!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-F2JGNH8ET9"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-F2JGNH8ET9');
-</script>
+
 </head>
 
 <body>
@@ -246,8 +249,9 @@ Donné immédiatement par téléphone</p>
 <!-- Snippet conversion Google Ads — Annonce Appel Direct -->
 <script>
 function gtag_report_conversion() {
+  if (!window.vtcTrackingConsent) return true;
   gtag('event', 'click_call', {'send_to':'G-F2JGNH8ET9','transport_type':'beacon'});
-  gtag('event', 'conversion', {
+  if (window.vtcMarketingConsent) gtag('event', 'conversion', {
     'send_to': 'AW-18024308239/HCKbCNLulYscEI-81JJD',
     'value': 1.0,
     'currency': 'EUR',
@@ -259,9 +263,63 @@ function gtag_report_conversion() {
 <script>
   document.querySelectorAll('a[href^="https://wa.me/"]').forEach(function(a){
     a.addEventListener('click',function(){
-      gtag('event','click_whatsapp',{'send_to':'G-F2JGNH8ET9','transport_type':'beacon'});
+      if (window.vtcTrackingConsent) gtag('event','click_whatsapp',{'send_to':'G-F2JGNH8ET9','transport_type':'beacon'});
     });
   });
+</script>
+
+
+<div class="cookie-consent" id="cookie-consent" hidden>
+  <p>Avec votre accord, Google Analytics mesure les visites et les clics (appels, WhatsApp). Google Ads mesure les clics d'appel venant de la publicité. Sans accord, aucun tag de mesure n'est chargé.</p>
+  <button type="button" data-privacy="all">Tout accepter</button>
+  <button type="button" data-privacy="stats">Statistiques seulement</button>
+  <button type="button" data-privacy="none">Tout refuser</button>
+</div>
+<button type="button" id="privacy-choices" class="privacy-choices">Modifier mes choix de confidentialité</button>
+<script>
+(function(){
+  var bar=document.getElementById('cookie-consent');
+  var storageKey='vtc_cdg_consent_v1';
+  var saved=null;
+  try{saved=JSON.parse(localStorage.getItem(storageKey)||'null');}
+  catch(e){saved=null;}
+  if(saved && Date.now()-saved.time>180*86400000) saved=null;
+  function enable(mode){
+    if(mode==='none')return;
+    window.vtcTrackingConsent=true;
+    window.vtcMarketingConsent=mode==='all';
+    gtag('consent','update',{
+      'analytics_storage':'granted',
+      'ad_storage':mode==='all'?'granted':'denied',
+      'ad_user_data':mode==='all'?'granted':'denied',
+      'ad_personalization':mode==='all'?'granted':'denied'
+    });
+    gtag('js',new Date());
+    gtag('config','G-F2JGNH8ET9');
+    if(mode==='all')gtag('config','AW-18024308239');
+    var script=document.createElement('script');
+    script.async=true;
+    script.src='https://www.googletagmanager.com/gtag/js?id=G-F2JGNH8ET9';
+    document.head.appendChild(script);
+  }
+  document.querySelectorAll('[data-privacy]').forEach(function(button){
+    button.addEventListener('click',function(){
+      var mode=button.getAttribute('data-privacy');
+      try{localStorage.setItem(storageKey,JSON.stringify({value:mode,time:Date.now()}));}catch(e){}
+      bar.hidden=true;
+      if(window.vtcTrackingConsent) {
+        gtag('consent','update',{
+          'analytics_storage':'denied','ad_storage':'denied',
+          'ad_user_data':'denied','ad_personalization':'denied'
+        });
+        location.reload();
+      } else enable(mode);
+    });
+  });
+  document.getElementById('privacy-choices').addEventListener('click',function(){bar.hidden=false;});
+  if(!saved || !['all','stats','none'].includes(saved.value))bar.hidden=false;
+  else enable(saved.value);
+})();
 </script>
 
 </body>
