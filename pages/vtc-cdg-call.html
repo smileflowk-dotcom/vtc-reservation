@@ -156,7 +156,7 @@ Paris → CDG • CDG → Paris<br>
 Aéroport Charles de Gaulle
 </p>
 
-<a href="tel:+33745624032" class="cta" onclick="return gtag_report_conversion('tel:+33745624032')">
+<a href="tel:+33745624032" class="cta" onclick="return gtag_report_conversion()">
 📞 APPELER MAINTENANT
 </a>
 
@@ -176,7 +176,7 @@ Aéroport Charles de Gaulle
 <li>✈️ Spécialiste CDG</li>
 </ul>
 
-<a href="tel:+33745624032" class="cta" onclick="return gtag_report_conversion('tel:+33745624032')">
+<a href="tel:+33745624032" class="cta" onclick="return gtag_report_conversion()">
 📞 Appeler maintenant
 </a>
 </div>
@@ -195,7 +195,7 @@ Aéroport Charles de Gaulle
 <p class="sub">Appelez maintenant → prix immédiat</p>
 <p class="highlight">✔ Tarif fixe • aucun frais caché</p>
 
-<a href="tel:+33745624032" class="cta" onclick="return gtag_report_conversion('tel:+33745624032')">
+<a href="tel:+33745624032" class="cta" onclick="return gtag_report_conversion()">
 📞 OBTENIR MON PRIX
 </a>
 </div>
@@ -205,7 +205,7 @@ Aéroport Charles de Gaulle
 <p>⭐⭐⭐⭐⭐ "Rapide, fiable, parfait pour CDG"</p>
 <p>⭐⭐⭐⭐⭐ "Chauffeur ponctuel et pro"</p>
 
-<a href="tel:+33745624032" class="cta" onclick="return gtag_report_conversion('tel:+33745624032')">
+<a href="tel:+33745624032" class="cta" onclick="return gtag_report_conversion()">
 📞 Réserver maintenant
 </a>
 </div>
@@ -228,7 +228,7 @@ Donné immédiatement par téléphone</p>
 <div class="block">
 <h2>Besoin d'un VTC CDG ?</h2>
 
-<a href="tel:+33745624032" class="cta" onclick="return gtag_report_conversion('tel:+33745624032')">
+<a href="tel:+33745624032" class="cta" onclick="return gtag_report_conversion()">
 📞 APPELER MAINTENANT
 </a>
 
@@ -239,26 +239,29 @@ Donné immédiatement par téléphone</p>
 
 <!-- STICKY -->
 <div class="sticky">
-<a href="tel:+33745624032" class="call-btn" onclick="return gtag_report_conversion('tel:+33745624032')">📞 Appeler</a>
+<a href="tel:+33745624032" class="call-btn" onclick="return gtag_report_conversion()">📞 Appeler</a>
 <a href="https://wa.me/33745624032" class="whatsapp-btn">💬 WhatsApp</a>
 </div>
 
 <!-- Snippet conversion Google Ads — Annonce Appel Direct -->
 <script>
-function gtag_report_conversion(url) {
-  var callback = function () {
-    if (typeof(url) != 'undefined') {
-      window.location = url;
-    }
-  };
+function gtag_report_conversion() {
+  gtag('event', 'click_call', {'send_to':'G-F2JGNH8ET9','transport_type':'beacon'});
   gtag('event', 'conversion', {
     'send_to': 'AW-18024308239/HCKbCNLulYscEI-81JJD',
     'value': 1.0,
     'currency': 'EUR',
-    'event_callback': callback
+    'transport_type': 'beacon'
   });
-  return false;
+  return true;
 }
+</script>
+<script>
+  document.querySelectorAll('a[href^="https://wa.me/"]').forEach(function(a){
+    a.addEventListener('click',function(){
+      gtag('event','click_whatsapp',{'send_to':'G-F2JGNH8ET9','transport_type':'beacon'});
+    });
+  });
 </script>
 
 </body>
